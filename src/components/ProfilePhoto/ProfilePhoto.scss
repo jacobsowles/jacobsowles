@@ -1,0 +1,12 @@
+$image-size: 300px;
+
+.profile-photo {
+	margin-right: 40px;
+	width: $image-size;
+
+	img {
+		border-radius: $image-size;
+		height: $image-size;
+		width: $image-size;
+	}
+}

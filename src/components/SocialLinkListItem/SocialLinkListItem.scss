@@ -1,0 +1,12 @@
+.social-link-list-item {
+	font-size: 2em;
+
+	a {
+		color: #FFFFFF;
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 1.0;
+		}
+	}
+}
