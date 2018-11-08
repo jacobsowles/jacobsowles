@@ -7,3 +7,9 @@
 		margin-top: 10px;
 	}
 }
+
+@media only screen and (max-width: 679px) {
+	.profile-info-header {
+		text-align: center;
+	}
+}

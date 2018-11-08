@@ -6,7 +6,6 @@ import { fab, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-s
 import { far, faAddressCard, faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faMapMarkerAlt, faCogs } from '@fortawesome/free-solid-svg-icons';
 import Profile from '../Profile/Profile';
-import ProfileInfoHeader from '../ProfileInfoHeader/ProfileInfoHeader';
 import ProfileInfoList from '../ProfileInfoList/ProfileInfoList';
 import ProfileInfoListItem from '../ProfileInfoListItem/ProfileInfoListItem';
 import SocialLinkList from '../SocialLinkList/SocialLinkList';
@@ -19,13 +18,13 @@ class App extends Component {
 		return (
 			<div className="app">
 				<main role="main">
-					<Profile>
-						<ProfileInfoHeader
-							title="Jacob Sowles"
-							subtitle="Full-stack developer, chronic automator, and aspiring everything-elser"
-						/>
+					<Profile
+						name="Jacob Sowles"
+						tagline="Full-stack developer, chronic automator, and aspiring everything-elser"
+					>
+						
 
-						<div className="wrapper" style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap'}}>
+						
 							<ProfileInfoList>
 								<ProfileInfoListItem
 									icon={faMapMarkerAlt}
@@ -55,7 +54,6 @@ class App extends Component {
 									title="GitHub"
 								/>
 							</SocialLinkList>
-						</div>
 					</Profile>
 				</main>
 			</div >

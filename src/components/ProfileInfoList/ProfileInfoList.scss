@@ -15,3 +15,12 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 679px) {
+	.profile-info-list {
+		ul {
+			list-style-type: none;
+			margin-right: 10px;
+		}
+	}
+}
