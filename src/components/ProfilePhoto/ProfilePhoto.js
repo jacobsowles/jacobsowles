@@ -1,7 +1,7 @@
 import './ProfilePhoto.scss';
 
 import React, { Component } from 'react';
-import photo from '../../../assets/profile-photo.jpg';
+import photo from '../../assets/profile-photo.jpg';
 
 class ProfilePhoto extends Component {
 	render() {

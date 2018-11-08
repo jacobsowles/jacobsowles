@@ -6,7 +6,9 @@ import { fab, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-s
 import { far, faAddressCard, faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faMapMarkerAlt, faCogs } from '@fortawesome/free-solid-svg-icons';
 import Profile from '../Profile/Profile';
-import Section from '../Section/Section';
+import ProfileInfoHeader from '../ProfileInfoHeader/ProfileInfoHeader';
+import ProfileInfoList from '../ProfileInfoList/ProfileInfoList';
+import ProfileInfoListItem from '../ProfileInfoListItem/ProfileInfoListItem';
 import SocialLinkList from '../SocialLinkList/SocialLinkList';
 import SocialLinkListItem from '../SocialLinkListItem/SocialLinkListItem';
 
@@ -15,40 +17,27 @@ library.add(fab, far, faAddressCard, faBuilding, faCogs, faGithub, faLinkedin, f
 class App extends Component {
 	render() {
 		return (
-			<div className="app container-fluid">
-				<header className="row align-items-start">
-					<div className="col-3"></div>
+			<div className="app">
+				<main role="main">
+					<Profile>
+						<ProfileInfoHeader
+							title="Jacob Sowles"
+							subtitle="Full-stack developer, chronic automator, and aspiring everything-elser"
+						/>
 
-					<div className="col-6">
-						<main role="main">
-							<Profile />
-						</main>
-					</div>
+						<div className="wrapper" style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap'}}>
+							<ProfileInfoList>
+								<ProfileInfoListItem
+									icon={faMapMarkerAlt}
+									text="Portland, Oregon"
+								/>
+								<ProfileInfoListItem
+									icon={faBuilding}
+									text="Vespa Group"
+									url="https://vespa-group.com"
+								/>
+							</ProfileInfoList>
 
-					<div className="col-3"></div>
-				</header>
-
-				<section className="row align-items-center">
-					<div className="col-3"></div>
-
-					<div className="col-6">
-						<Section title="Things I'm currently excited about">
-							<ul>
-								<li>Effortlessly processing receipts with Zapier and Hazel</li>
-								<li>Automatically cataloging business card contacts with optical character recognition and the Airtable API</li>
-								<li>Jumpstarting my daily guitar practice with Evernote, Harvest, and Keyboard Maestro</li>
-							</ul>
-						</Section>
-					</div>
-
-					<div className="col-3"></div>
-				</section>
-
-				<footer className="row align-items-end">
-					<div className="col-3"></div>
-
-					<div className="col-6">
-						<Section title="Get in touch">
 							<SocialLinkList>
 								<SocialLinkListItem
 									icon={faLinkedin}
@@ -57,21 +46,19 @@ class App extends Component {
 								/>
 								<SocialLinkListItem
 									icon={faTwitter}
-									url="https://twitter.com/jacobsowles"
+									url="https://twitter.com/jacobsowles/"
 									title="Twitter"
 								/>
 								<SocialLinkListItem
 									icon={faGithub}
-									url="https://github.com/jacobsowles"
-									title="Github"
+									url="https://github.com/jacobsowles/"
+									title="GitHub"
 								/>
 							</SocialLinkList>
-						</Section>
-					</div>
-
-					<div className="col-3"></div>
-				</footer>
-			</div>
+						</div>
+					</Profile>
+				</main>
+			</div >
 		);
 	}
 }

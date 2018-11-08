@@ -10,10 +10,10 @@ class ProfileInfoListItem extends Component {
 			: this.props.text;
 		
 		return (
-			<li className="profile-info-list-item">
+			<span className="profile-info-list-item">
 				<FontAwesomeIcon icon={this.props.icon} />
 				{itemText}
-			</li>
+			</span>
 		);
 	}
 }
