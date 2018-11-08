@@ -1,9 +1,9 @@
 import './ProfilePhoto.scss';
 
 import React, { Component } from 'react';
-import photo from '../../assets/profile-photo.jpg';
+import photo from '../../../assets/profile-photo.jpg';
 
-class PageHeader extends Component {
+class ProfilePhoto extends Component {
 	render() {
 		return (
 			<div className="profile-photo">
@@ -13,4 +13,4 @@ class PageHeader extends Component {
 	}
 }
 
-export default PageHeader;
+export default ProfilePhoto;
