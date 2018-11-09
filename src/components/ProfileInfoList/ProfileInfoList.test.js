@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SocialLinkList from './SocialLinkList';
+import ProfileInfoList from './ProfileInfoList';
 
 it('renders without crashing', () => {
-	const div = React.createElement('div');
-	ReactDOM.render(<SocialLinkList />, div);
+	const div = document.createElement('div');
+	ReactDOM.render(<ProfileInfoList />, div);
 	ReactDOM.unmountComponentAtNode(div);
 })
