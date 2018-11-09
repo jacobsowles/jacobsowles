@@ -4,6 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY . ./
 RUN npm install
+RUN npm test
 RUN npm run build
 
 # stage 2: deploy the app

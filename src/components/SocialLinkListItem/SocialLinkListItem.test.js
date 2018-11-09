@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SocialLinkListItem from './SocialLinkListItem';
 
 it('renders without crashing', () => {
-	const div = document.createElement('div');
+	const div = React.createElement('div');
 	ReactDOM.render(<SocialLinkListItem />, div);
 	ReactDOM.unmountComponentAtNode(div);
 })
