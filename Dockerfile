@@ -1,5 +1,5 @@
 # stage 1: build the app
-FROM node:11.0.0 as react-build
+FROM node:10.13.0 as react-build
 RUN mkdir /app
 WORKDIR /app
 COPY . ./
