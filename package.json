@@ -17,7 +17,7 @@
     "reactstrap": "^6.5.0"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "npm run test && react-scripts build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "CI=true react-scripts test --env=jsdom"

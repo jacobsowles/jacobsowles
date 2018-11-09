@@ -16,7 +16,7 @@ const ProfileInfoList = ({ children }) => {
 };
 
 ProfileInfoList.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 export default ProfileInfoList;

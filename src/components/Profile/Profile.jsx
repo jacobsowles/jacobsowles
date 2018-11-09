@@ -24,7 +24,7 @@ const Profile = ({ children, name, tagline }) => {
 };
 
 Profile.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   name: PropTypes.string.isRequired,
   tagline: PropTypes.string
 };

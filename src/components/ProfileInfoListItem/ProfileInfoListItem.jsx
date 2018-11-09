@@ -16,7 +16,7 @@ const ProfileInfoListItem = ({ icon, text, url }) => {
 };
 
 ProfileInfoListItem.propTypes = {
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   text: PropTypes.string.isRequired,
   url: PropTypes.string
 };

@@ -4,6 +4,9 @@ import SocialLinkListItem from './SocialLinkListItem';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<SocialLinkListItem />, div);
+  ReactDOM.render(
+    <SocialLinkListItem icon="linkedin" title="Title" url="http://google.com" />,
+    div
+  );
   ReactDOM.unmountComponentAtNode(div);
 });

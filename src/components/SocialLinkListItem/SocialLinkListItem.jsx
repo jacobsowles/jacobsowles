@@ -12,7 +12,7 @@ const SocialLinkList = ({ icon, title, url }) => {
 };
 
 SocialLinkList.propTypes = {
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 };
