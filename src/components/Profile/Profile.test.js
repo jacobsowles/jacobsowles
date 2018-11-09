@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProfileInfoList from './ProfileInfoList';
+import Profile from './Profile';
 
 it('renders without crashing', () => {
-	const div = React.createElement('div');
-	ReactDOM.render(<ProfileInfoList />, div);
+	const div = document.createElement('div');
+	ReactDOM.render(<Profile />, div);
 	ReactDOM.unmountComponentAtNode(div);
 })
