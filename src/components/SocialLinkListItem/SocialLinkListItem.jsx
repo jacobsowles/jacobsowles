@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SocialLinkList = ({ icon, title, url }) => {
   return (
-    <a href={url} className="social-link-list-ite" title={title}>
-      <FontAwesomeIcon icon={icon} />
+    <a href={url} className="social-link-list-ite">
+      <FontAwesomeIcon icon={icon} title={title} />
     </a>
   );
 };
