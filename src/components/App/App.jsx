@@ -4,7 +4,7 @@ import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { far, faAddressCard, faBuilding } from '@fortawesome/free-regular-svg-icons';
-import { faMapMarkerAlt, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faCogs, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Profile from '../Profile/Profile';
 import ProfileInfoList from '../ProfileInfoList/ProfileInfoList';
 import ProfileInfoListItem from '../ProfileInfoListItem/ProfileInfoListItem';
@@ -17,6 +17,7 @@ library.add(
   faAddressCard,
   faBuilding,
   faCogs,
+  faEnvelope,
   faGithub,
   faLinkedin,
   faMapMarkerAlt,
@@ -41,6 +42,11 @@ const App = () => {
           </ProfileInfoList>
 
           <SocialLinkList>
+            <SocialLinkListItem
+              icon={faEnvelope}
+              url="mailto:jacob@jacobsowles.com"
+              title="Email"
+            />
             <SocialLinkListItem
               icon={faLinkedin}
               url="https://www.linkedin.com/in/jacobsowles/"
