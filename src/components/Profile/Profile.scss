@@ -29,8 +29,10 @@
       display: flex;
       flex-wrap: wrap;
 
-      .profile-info-body-wrapper {
-        justify-content: space-around;
+      .profile-info-wrapper {
+        .profile-info-body-wrapper {
+          justify-content: space-around;
+        }
       }
     }
   }
