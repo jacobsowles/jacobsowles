@@ -8,11 +8,17 @@
     display: flex;
     flex-direction: row;
 
-    .profile-info-body-wrapper {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-wrap: wrap;
+    .profile-info-wrapper {
+      background: #ffffff;
+      border: 1px solid #e1e2e2;
+      padding: 40px;
+
+      .profile-info-body-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+      }
     }
   }
 }
