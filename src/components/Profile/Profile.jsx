@@ -1,9 +1,10 @@
-import './Profile.scss';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProfileInfoHeader from '../ProfileInfoHeader/ProfileInfoHeader';
 import ProfilePhoto from '../ProfilePhoto/ProfilePhoto';
+
+import QuoteContainer from '../QuoteContainer';
+import './Profile.scss';
 
 const Profile = ({ children, name, tagline }) => {
   return (
@@ -18,6 +19,8 @@ const Profile = ({ children, name, tagline }) => {
             <div className="profile-info-body-wrapper">{children}</div>
           </div>
         </div>
+
+        <QuoteContainer />
       </div>
     </div>
   );
