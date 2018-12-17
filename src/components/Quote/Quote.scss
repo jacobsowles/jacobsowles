@@ -1,5 +1,5 @@
 .quote {
-  margin: 40px 10px;
+  margin: 40px auto 10px auto;
   width: 100%;
 
   p {
@@ -10,4 +10,12 @@
 }
 
 @media only screen and (max-width: 679px) {
+  .quote {
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    p {
+      margin-top: 10px;
+    }
+  }
 }
