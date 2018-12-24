@@ -10,7 +10,7 @@ const Profile = ({ children, name, tagline }) => {
   return (
     <div className="profile container-fluid">
       <div className="row">
-        <div className="profile-wrapper col-12">
+        <div className="profile-wrapper col-12 m-0 p-0">
           <ProfilePhoto />
 
           <div className="profile-info-wrapper">
