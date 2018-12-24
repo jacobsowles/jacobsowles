@@ -20,6 +20,11 @@
         flex-wrap: wrap;
       }
     }
+
+    .profile-photo {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -34,6 +39,25 @@
           justify-content: space-around;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 491px) {
+  .profile {
+    .social-link-list {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 422px) {
+  .profile {
+    height: initial;
+    padding-top: 20px;
+
+    h1 {
+      font-size: 2.6em;
     }
   }
 }
