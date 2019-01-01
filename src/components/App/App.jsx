@@ -30,7 +30,7 @@ const App = () => {
       <main role="main">
         <Profile
           name="Jacob Sowles"
-          tagline="Full-stack developer, chronic automator, and aspiring everything-elser"
+          tagline="Full-stack software developer, chronic automator, and aspiring everything-elser"
         >
           <ProfileInfoList>
             <ProfileInfoListItem icon={faMapMarkerAlt} text="Portland, Oregon" />
