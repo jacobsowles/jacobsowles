@@ -4,7 +4,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { init } from '../utils/icons';
-import { rhythm } from '../utils/typography';
 
 init();
 
@@ -26,7 +25,7 @@ class BlogIndex extends React.Component {
             <div key={node.fields.slug}>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  marginBottom: 10,
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>

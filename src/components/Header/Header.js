@@ -1,8 +1,9 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link, StaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Logo from '../Logo';
 import './Header.scss';
 
 function Header({ isRootPath, title }) {
@@ -17,7 +18,7 @@ function Header({ isRootPath, title }) {
         return (
           <div className="header">
             <Link className="home-link" to={`/`}>
-              <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+              <Logo />
 
               <div className="header-text-wrapper">
                 {titleHtml}

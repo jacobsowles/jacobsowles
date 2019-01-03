@@ -17,60 +17,59 @@ function Bio() {
           <div className="bio">
             <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
 
-            <div className="bio-info-wrapper">
-              <p className="tagline">
-                Full-stack software developer, chronic automator, and aspiring
-                everything-elser.
-              </p>
+            <p>
+              Full-stack developer with a B.S. in Computer Science and a history
+              of delivering responsive, cross-browser, accessible web
+              applications at the enterprise level.
+            </p>
 
-              <div className="list-wrapper">
-                <ul className="bio-info-list">
-                  <li>
-                    <BioInfoItem
-                      icon={['fas', 'map-marker-alt']}
-                      text="Portland, Oregon"
-                    />
-                  </li>
-                  <li>
-                    <BioInfoItem
-                      icon={['fas', 'users']}
-                      text="Vespa Group"
-                      url="https://vespa-group.com"
-                    />
-                  </li>
-                </ul>
+            <div className="list-wrapper">
+              <ul className="bio-info-list">
+                <li>
+                  <BioInfoItem
+                    icon={['fas', 'map-marker-alt']}
+                    text="Portland, Oregon"
+                  />
+                </li>
+                <li>
+                  <BioInfoItem
+                    icon={['fas', 'users']}
+                    text="Vespa Group"
+                    url="https://vespa-group.com"
+                  />
+                </li>
+              </ul>
 
-                <ul className="social-link-list">
-                  <li>
-                    <SocialLink
-                      icon={['fas', 'envelope']}
-                      url={`mailto:${social.email}`}
-                      title="Email"
-                    />
-                  </li>
-                  <li>
-                    <SocialLink
-                      icon={['fab', 'linkedin']}
-                      url={`https://www.linkedin.com/in/${social.linkedin}/`}
-                      title="LinkedIn"
-                    />
-                  </li>
-                  <li>
-                    <SocialLink
-                      icon={['fab', 'twitter']}
-                      url={`https://twitter.com/${social.twitter}/`}
-                      title="Twitter"
-                    />
-                  </li>
-                  <li>
-                    <SocialLink
-                      icon={['fab', 'github']}
-                      url={`https://github.com/${social.github}/`}
-                      title="GitHub"
-                    />
-                  </li>
-                </ul>
-              </div>
+              <ul className="social-link-list">
+                <li>
+                  <SocialLink
+                    icon={['fas', 'envelope']}
+                    url={`mailto:${social.email}`}
+                    title="Email"
+                  />
+                </li>
+                <li>
+                  <SocialLink
+                    icon={['fab', 'linkedin']}
+                    url={`https://www.linkedin.com/in/${social.linkedin}/`}
+                    title="LinkedIn"
+                  />
+                </li>
+                <li>
+                  <SocialLink
+                    icon={['fab', 'twitter']}
+                    url={`https://twitter.com/${social.twitter}/`}
+                    title="Twitter"
+                  />
+                </li>
+                <li>
+                  <SocialLink
+                    icon={['fab', 'github']}
+                    url={`https://github.com/${social.github}/`}
+                    title="GitHub"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         );
@@ -92,6 +91,9 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
+          email
+          github
+          linkedin
           twitter
         }
       }

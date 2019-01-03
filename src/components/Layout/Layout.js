@@ -1,6 +1,6 @@
-import classNames from 'classnames';
 import React from 'react';
 
+import Footer from '../Footer';
 import Header from '../Header';
 import './Layout.scss';
 
@@ -12,11 +12,8 @@ class Layout extends React.Component {
 
     return (
       <div className="layout">
-        <div className="row row__header row__light">
-          <header
-            className={classNames({ header__root: isRootPath }, 'row-content')}
-            role="banner"
-          >
+        <div className="row row__header row__white">
+          <header className="row-content" role="banner">
             <Header isRootPath={isRootPath} title={title} />
           </header>
         </div>
@@ -25,10 +22,10 @@ class Layout extends React.Component {
           <main className="row-content">{children}</main>
         </div>
 
-        <div className="row row__dark">
-          <footer className="row-content">
-            <p>All content © {new Date().getFullYear()} Jacob Sowles</p>
-          </footer>
+        <div className="row row__dark row__footer">
+          <div className="row-content">
+            <Footer />
+          </div>
         </div>
       </div>
     );
