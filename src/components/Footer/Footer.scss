@@ -21,6 +21,10 @@ footer {
         text-transform: uppercase;
       }
 
+      li:last-child p {
+        margin-bottom: 0;
+      }
+
       p {
         margin-top: 0;
       }
@@ -30,7 +34,6 @@ footer {
   small {
     display: block;
     font-size: 0.8em;
-    margin-top: 20px;
     text-align: center;
   }
 
