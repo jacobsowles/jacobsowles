@@ -1,9 +1,7 @@
 import classNames from 'classnames';
-import { Link } from 'gatsby';
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import Bio from '../Bio';
-import { rhythm, scale } from '../../utils/typography';
+import Header from '../Header';
 import './Layout.scss';
 
 class Layout extends React.Component {
@@ -11,42 +9,7 @@ class Layout extends React.Component {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
     const isRootPath = location.pathname === rootPath;
-    let header;
 
-    if (isRootPath) {
-      header = (
-        <Fragment>
-          <h1>
-            <Link
-              style={{
-                boxShadow: `none`,
-                textDecoration: `none`,
-                color: `inherit`,
-              }}
-              to={`/`}
-            >
-              {title}
-            </Link>
-          </h1>
-          <Bio />
-        </Fragment>
-      );
-    } else {
-      header = (
-        <h3>
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      );
-    }
     return (
       <div className="layout">
         <div className="row row__header row__light">
@@ -54,7 +17,7 @@ class Layout extends React.Component {
             className={classNames({ header__root: isRootPath }, 'row-content')}
             role="banner"
           >
-            {header}
+            <Header isRootPath={isRootPath} title={title} />
           </header>
         </div>
 

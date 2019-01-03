@@ -1,27 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+@import '../../styles/variables';
 
 .layout {
+  color: $text-primary;
   display: flex;
   flex-direction: column;
-  font-family: Hind, sans-serif;
+  font-family: $font-body;
   height: 100%;
   height: 100vh;
-
-  h1,
-  h3 {
-    font-family: Hind, sans-serif;
-    font-weight: 300;
-    margin-top: 0;
-  }
-
-  h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    margin-bottom: 0;
-  }
 
   .row {
     margin: 0;

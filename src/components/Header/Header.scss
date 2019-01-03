@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.header {
+  align-items: center;
+  display: flex;
+
+  h1,
+  h3 {
+    font-family: $font-headers;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  img {
+    border-radius: 100%;
+  }
+
+  .gatsby-image-wrapper {
+    margin-right: 10px;
+  }
+
+  .header-text-wrapper {
+    display: inline-block;
+  }
+
+  .home-link {
+    align-items: center;
+    box-shadow: none;
+    color: $text-primary;
+    display: flex;
+    text-decoration: none;
+  }
+
+  .tagline {
+    margin-bottom: 0;
+  }
+}
