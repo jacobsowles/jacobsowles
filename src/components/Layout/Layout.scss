@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  font-family: Hind, sans-serif;
+  height: 100%;
+  height: 100vh;
+
+  h1,
+  h3 {
+    font-family: Hind, sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .row {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .row-content {
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 1000px;
+    }
+  }
+
+  .row__dark {
+    background: #3c3f43;
+    color: #ffffff;
+  }
+
+  .row__header {
+    //position: fixed;
+  }
+
+  .row__light {
+    background: #f5f7f9;
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  .row__main {
+    flex: 1;
+  }
+
+  .row__white {
+    background: #ffffff;
+  }
+}
