@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 import Logo from '../Logo';
 import './Header.scss';
@@ -16,18 +17,36 @@ function Header({ isRootPath, title }) {
         const { author } = data.site.siteMetadata;
 
         return (
-          <div className="header">
-            <Link className="home-link" to={`/`}>
-              <Logo />
+          <Navbar className="header">
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link className="home-link" to={`/`}>
+                  <Logo />
 
-              <div className="header-text-wrapper">
-                {titleHtml}
-                <p className="tagline">
-                  Full-stack developer. Aspiring everything-elser.
-                </p>
-              </div>
-            </Link>
-          </div>
+                  <div className="header-text-wrapper">
+                    {titleHtml}
+                    <p className="tagline">
+                      Full-stack developer. Aspiring everything-elser.
+                    </p>
+                  </div>
+                </Link>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+              <Nav pullRight>
+                <li>
+                  <Link to="/">Blog</Link>
+                </li>
+                <li>
+                  <Link to="/skills">Skills</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         );
       }}
     />
