@@ -18,7 +18,7 @@ class Layout extends React.Component {
           </header>
         </div>
 
-        <div className="row row__main row__white">
+        <div className="row row__main row__light">
           <main className="row-content">{children}</main>
         </div>
 
