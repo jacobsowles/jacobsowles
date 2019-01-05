@@ -26,6 +26,10 @@ function Footer() {
                     </p>
                   </li>
                   <li>
+                    <Link to={'/about'}>About</Link>
+                    <p>A bit about who I am and how I work</p>
+                  </li>
+                  <li>
                     <Link to={'/skills'}>Skills</Link>
                     <p>A summary of my strengths</p>
                   </li>
