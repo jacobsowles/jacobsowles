@@ -1,7 +1,7 @@
+import { graphql } from 'gatsby';
 import React from 'react';
-import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/Bio';
+import BlogPost from '../components/BlogPost';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -14,48 +14,9 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div className="content-box">
-          <h1>{post.frontmatter.title}</h1>
-          <p
-            style={{
-              display: `block`,
-              marginBottom: 10,
-              marginTop: 0,
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-            style={{
-              marginBottom: 10,
-            }}
-          />
 
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
+        <div className="content-box">
+          <BlogPost next={next} post={post} previous={previous} />
         </div>
       </Layout>
     );
