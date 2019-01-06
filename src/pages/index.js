@@ -1,6 +1,7 @@
-import { Link, graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 
+import BlogPostSnippet from '../components/BlogPostSnippet';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { init } from '../utils/icons';
@@ -28,15 +29,10 @@ class BlogIndex extends React.Component {
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
+
           return (
             <div className="content-box" key={node.fields.slug}>
-              <h3 style={{ marginBottom: 10 }}>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <BlogPostSnippet node={node} title={title} />
             </div>
           );
         })}

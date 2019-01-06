@@ -7,7 +7,9 @@ const BlogPost = ({ next, post, previous }) => {
   return (
     <div className="blog-post">
       <h1>{post.frontmatter.title}</h1>
-      <p className="date">{post.frontmatter.date}</p>
+      <small>{post.frontmatter.date}</small>
+
+      <hr />
 
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
