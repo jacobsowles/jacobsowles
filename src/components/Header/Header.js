@@ -28,18 +28,18 @@ function Header({ isRootPath, title }) {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <li>
+          <ListItem>
             <Link to="/">Blog</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="/about">About</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="/skills">Skills</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="/contact">Contact</Link>
-          </li>
+          </ListItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -50,5 +50,12 @@ Header.propTypes = {
   isRootPath: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
 };
+
+/*
+ * This is required because Bootstrap's NavItem can't be used with Gatsby's Link component,
+ * and using regular HTML <li> tags generates a console error saying that React is trying to
+ * pass props to it that the <li> tag doesn't suport.
+ */
+const ListItem = ({ children }) => <li>{children}</li>;
 
 export default Header;
