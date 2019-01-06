@@ -2,6 +2,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faGithub,
   faLinkedin,
+  faMedium,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -18,6 +19,7 @@ export const init = () =>
     faGithub,
     faLinkedin,
     faMapMarkerAlt,
+    faMedium,
     faTwitter,
     faUsers
   );

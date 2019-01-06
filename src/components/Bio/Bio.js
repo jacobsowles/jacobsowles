@@ -50,9 +50,16 @@ function Bio() {
                 </li>
                 <li>
                   <SocialLink
-                    icon={['fab', 'linkedin']}
-                    url={`https://www.linkedin.com/in/${social.linkedin}/`}
-                    title="LinkedIn"
+                    icon={['fab', 'github']}
+                    url={`https://github.com/${social.github}/`}
+                    title="GitHub"
+                  />
+                </li>
+                <li>
+                  <SocialLink
+                    icon={['fab', 'medium']}
+                    url={`https://medium.com/${social.medium}/`}
+                    title="Medium"
                   />
                 </li>
                 <li>
@@ -62,11 +69,12 @@ function Bio() {
                     title="Twitter"
                   />
                 </li>
+
                 <li>
                   <SocialLink
-                    icon={['fab', 'github']}
-                    url={`https://github.com/${social.github}/`}
-                    title="GitHub"
+                    icon={['fab', 'linkedin']}
+                    url={`https://www.linkedin.com/in/${social.linkedin}/`}
+                    title="LinkedIn"
                   />
                 </li>
               </ul>
@@ -94,6 +102,7 @@ const bioQuery = graphql`
           email
           github
           linkedin
+          medium
           twitter
         }
       }

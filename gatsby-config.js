@@ -8,6 +8,7 @@ module.exports = {
       email: `jacob@jacobsowles.com`,
       github: `jacobsowles`,
       linkedin: `jacobsowles`,
+      medium: `@jacobsowles`,
       twitter: `jacobsowles`,
     },
   },
