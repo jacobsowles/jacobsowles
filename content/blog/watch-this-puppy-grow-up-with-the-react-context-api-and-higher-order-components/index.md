@@ -13,6 +13,10 @@ Here's what we'll set out to build.
 
 ![Puppy Growth](./demo.gif)
 
+## Version 1: No Frills
+
+---
+
 To start with, let's create the simplest working version and not get too bogged down in optimization.
 
 I generally write the main component first and stub out the details, then fill in the gaps after I fully understand the flow of what I'm trying to achieve. So here's the `App` component.
@@ -78,6 +82,10 @@ With the pieces written this way, the project works just fine. And honestly, if 
 But let's assume we need to make use of the theme state several components deep. For example, what if the `App` component renders a `Router` component, which renders a `HomePage` component, which renders a `Timeline` component, which renders the picture? Suddenly, the loading state is managed at the highest level (`App`) but needs to be passed all the way down to the `Timeline` component so that it can programatically render the appropriate content. (In some cases, you could just maintain the theme state closer to where it's being used, but it's common for many components in different parts of the tree to need access to the theme state, so bubbling it up to the lowest common parent component makes the most sense.)
 
 The act of passing down props through several levels is known as [prop drilling](https://blog.kentcdodds.com/prop-drilling-bb62e02cb691 'Kent C. Dodds - Prop Drilling') and can be a real pain. If we were to add another component somewhere in the middle of the tree, we'd need to add a prop to receive and pass on the state, even if that component doesn't use that state. That's a bad code smell. But also consider implementing type security with PropTypes or TypeScript. For every component that receives the theme state as a prop, we'd need to update the interface or propTypes object to include it. For a project this size, it's not a big deal, but it would quickly get out of hand for a larger project. So let's fix it using the React Context API.
+
+## Version 2: Adding Context
+
+---
 
 First, let's create the `ThemeContext` itself.
 
@@ -200,6 +208,10 @@ I don't want to be required to remember or understand any of the implementatino 
 
 So let's improve the developer ergonomics by wrapping our context in a higher-order component.
 
+## Version 3: Adding a Higher-order Component
+
+---
+
 ```jsx
 import { ThemeConsumer } from '../components/ThemeContext';
 
@@ -257,4 +269,8 @@ This pattern scales very easily as well. If another component is created and nee
 
 We could even extract our `ThemeContext` and `withTheme` components into a separate package and enable the seamless use of theme customization across different projects. That would require some upgrades to the `ThemeContext` to make it truly useful, but I'll leave that challenge to you.
 
-And while this project may not be much more than a toy problem, this higher-order-component-wrapped context API pattern can be applied in a number of ways, like visual themes (light, dark, etc.), localization, routing, and more. I encourage you to give it a shot and see what you come up with.
+## Wrapping Up
+
+---
+
+While this project may not be much more than a toy problem, this higher-order-component-wrapped context API pattern can be applied in a number of ways, like visual themes (light, dark, etc.), localization, routing, and more. I encourage you to give it a shot and see what you come up with.
