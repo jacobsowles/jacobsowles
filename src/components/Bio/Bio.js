@@ -1,5 +1,4 @@
 import { StaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
 import React from 'react';
 
 import BioInfoItem from './BioInfoItem';
@@ -15,7 +14,7 @@ function Bio() {
 
         return (
           <div className="bio">
-            <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+            <img src="/profile-photo.jpg" alt={author} />
 
             <p>
               Full-stack developer with a B.S. in Computer Science and a history
@@ -88,13 +87,6 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-photo.jpg/" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author
