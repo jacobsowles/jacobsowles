@@ -2,7 +2,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import React from 'react';
 
-import BioInfoItem from '../BioInfoItem';
+import BioInfoItem from './BioInfoItem';
 import SocialLink from '../SocialLink';
 import './Bio.scss';
 
