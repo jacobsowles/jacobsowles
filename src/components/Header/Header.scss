@@ -13,10 +13,6 @@
     text-transform: uppercase;
   }
 
-  img {
-    border-radius: 100%;
-  }
-
   .header-text-wrapper {
     display: inline-block;
   }
@@ -28,7 +24,10 @@
     display: flex;
     text-decoration: none;
 
-    svg {
+    .gatsby-image-wrapper {
+      flex-basis: 50px;
+      flex-grow: 0;
+      flex-shrink: 0;
       margin-right: 20px;
     }
   }
