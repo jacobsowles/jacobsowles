@@ -9,6 +9,11 @@ footer {
     color: $text-white;
     text-decoration: none;
 
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:focus,
     &:hover {
       color: $text-white;
     }
