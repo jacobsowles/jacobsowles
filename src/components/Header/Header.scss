@@ -93,15 +93,16 @@
   .navbar-nav {
     > li {
       > a {
+        border-bottom: 2px solid $background-white;
         color: $text-primary;
         font-size: 0.9em;
         font-weight: 400;
-        padding: 30px 15px;
+        padding: 30px 15px 28px 15px;
         text-transform: uppercase;
 
         &[aria-current='page'] {
           background: none;
-          box-shadow: inset 0 -2px 0 0 $brand-primary;
+          border-color: $brand-primary;
           font-weight: bold;
 
           &:focus,
