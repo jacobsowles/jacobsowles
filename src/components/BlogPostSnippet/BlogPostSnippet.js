@@ -7,13 +7,13 @@ import './BlogPostSnippet.scss';
 const BlogPostSnippet = ({ node, title }) => {
   return (
     <div className="blog-post-snippet">
+      <small>{node.frontmatter.date}</small>
+
       <h3>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
           {title}
         </Link>
       </h3>
-
-      <small>{node.frontmatter.date}</small>
 
       <hr />
 

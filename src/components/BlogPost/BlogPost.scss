@@ -2,15 +2,20 @@
   h1 {
     font-size: 1.5em;
     line-height: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 15px !important;
+  }
+
+  hr {
+    margin: 10px 0;
   }
 
   img {
     max-width: 100%;
   }
 
-  .date {
-    display: block;
-    margin: 0;
+  small {
+    font-style: italic;
   }
 
   .post-navigation-links {

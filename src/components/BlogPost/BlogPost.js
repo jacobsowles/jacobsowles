@@ -6,8 +6,8 @@ import './BlogPost.scss';
 const BlogPost = ({ next, post, previous }) => {
   return (
     <div className="blog-post">
-      <h1>{post.frontmatter.title}</h1>
       <small>{post.frontmatter.date}</small>
+      <h1>{post.frontmatter.title}</h1>
 
       <hr />
 
