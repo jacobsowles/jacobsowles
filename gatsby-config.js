@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Jacob Sowles`,
     author: `Jacob Sowles`,
-    description: `Full-stack software developer, chronic automator, and aspiring everything-elser.`,
+    description: `Full-stack software developer. Aspiring everything-elser.`,
     siteUrl: `http://jacobsowles.com`,
     social: {
       email: `jacob@jacobsowles.com`,
@@ -42,7 +42,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: false,
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
