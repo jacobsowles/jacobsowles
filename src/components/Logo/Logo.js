@@ -8,9 +8,9 @@ function Logo() {
       <g
         id="Artboard"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g id="Group" transform="translate(1.000000, 1.000000)">
           <path
