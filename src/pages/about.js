@@ -3,6 +3,10 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import communityImage from '../../content/assets/community.png';
+import egoImage from '../../content/assets/ego.png';
+import introspectiveImage from '../../content/assets/introspective.png';
+import valueImage from '../../content/assets/value.png';
 
 class AboutPage extends React.Component {
   render() {
@@ -37,7 +41,7 @@ class AboutPage extends React.Component {
           </p>
 
           <div className="text-with-image-wrapper">
-            <img src="/value.png" alt="happy users" />
+            <img src={valueImage} alt="happy users" />
 
             <div>
               <h2>Value-driven</h2>
@@ -54,7 +58,7 @@ class AboutPage extends React.Component {
           </div>
 
           <div className="text-with-image-wrapper">
-            <img src="/ego.png" alt="ego" />
+            <img src={egoImage} alt="ego" />
             <div>
               <h2>Ego-free</h2>
 
@@ -69,7 +73,7 @@ class AboutPage extends React.Component {
           </div>
 
           <div className="text-with-image-wrapper">
-            <img src="/community.png" alt="open source" />
+            <img src={communityImage} alt="open source" />
 
             <div>
               <h2>Community-focused</h2>
@@ -93,7 +97,7 @@ class AboutPage extends React.Component {
           </div>
 
           <div className="text-with-image-wrapper">
-            <img src="/introspective.png" alt="introspective" />
+            <img src={introspectiveImage} alt="introspective" />
             <div>
               <h2>Introspective</h2>
               <p>

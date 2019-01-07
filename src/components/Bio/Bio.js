@@ -3,6 +3,7 @@ import React from 'react';
 
 import BioInfoItem from './BioInfoItem';
 import SocialLink from '../SocialLink';
+import profileImage from '../../../content/assets/profile-photo.jpg';
 import './Bio.scss';
 
 function Bio() {
@@ -14,7 +15,7 @@ function Bio() {
 
         return (
           <div className="bio">
-            <img src="/profile-photo.jpg" alt={author} />
+            <img src={profileImage} alt={author} />
 
             <p>
               Full-stack developer with a B.S. in Computer Science and a history
