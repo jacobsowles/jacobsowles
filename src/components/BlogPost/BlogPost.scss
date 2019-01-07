@@ -1,0 +1,33 @@
+.blog-post {
+  h1 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 15px !important;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  small {
+    font-style: italic;
+  }
+
+  .post-navigation-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+}
