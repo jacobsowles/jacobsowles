@@ -55,7 +55,8 @@ class SkillsPage extends React.Component {
 
           <p>
             That said, the following word cloud is a decent high-level
-            representation of my strongest technical skills.
+            representation of the technologies with which I'm the most
+            productive.
           </p>
 
           <WordCloud />
