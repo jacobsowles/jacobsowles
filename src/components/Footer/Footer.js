@@ -53,13 +53,6 @@ function Footer() {
 
 const footerQuery = graphql`
   query FooterQuery {
-    avatar: file(absolutePath: { regex: "/profile-photo.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author
