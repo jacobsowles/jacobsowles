@@ -37,6 +37,13 @@ function Bio() {
                     url="https://vespa-group.com"
                   />
                 </li>
+                <li>
+                  <BioInfoItem
+                    icon={['fas', 'users']}
+                    text="Thinkful"
+                    url="https://thinkful.com"
+                  />
+                </li>
               </ul>
 
               <ul className="social-link-list">
