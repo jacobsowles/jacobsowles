@@ -14,7 +14,7 @@ class SkillsPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Top Skills"
+          description="The top software development skills of Jacob Sowles"
           keywords={[
             `blog`,
             `gatsby`,
@@ -25,6 +25,7 @@ class SkillsPage extends React.Component {
             `software development`,
             `strengths`,
           ]}
+          title="Top Skills"
         />
         <div className="content-box">
           <h1>Top skills at a glance</h1>
@@ -44,18 +45,6 @@ class SkillsPage extends React.Component {
           </p>
 
           <WordCloud />
-
-          <p>
-            But let's not forget the equally-important personal skills. These
-            are the top terms I'd use to describe my professional self.
-          </p>
-
-          <ul>
-            <li>collaborative</li>
-            <li>introspective</li>
-            <li>independent</li>
-            <li>accountable</li>
-          </ul>
         </div>
       </Layout>
     );

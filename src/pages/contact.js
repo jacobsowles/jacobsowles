@@ -12,7 +12,7 @@ class ContactPage extends React.Component {
     return (
       <Layout location={this.props.location} title={title}>
         <SEO
-          title="Contact"
+          description="Contact Jacob Sowles"
           keywords={[
             `blog`,
             `contact`,
@@ -24,6 +24,7 @@ class ContactPage extends React.Component {
             `social media`,
             `software development`,
           ]}
+          title="Contact"
         />
 
         <div className="content-box">
