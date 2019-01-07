@@ -7,9 +7,9 @@ The [React Context API](https://reactjs.org/docs/context.html 'reactjs.org - Con
 
 But we can take things a step further by wrapping the context API in a [higher-order component](https://reactjs.org/docs/higher-order-components.html 'reactjs.org - Higher-order Components') to get the power of contexts while hiding the implementation details and mitigating the syntax bloat that comes with it.
 
-This post will first demonstrate an app built without the context API or higher-order component. That will serve as the "back in my day, we had to walk 20 miles to school, uphill both ways, in the snow, barefoot" example to illustrate how rough things used to be. Then we'll add in just the context API, and finally turn it up to 11 by adding the higher-order component.
+This post will first demonstrate an app built without the context API or higher-order components. That will serve as the "back in my day, we had to walk 20 miles to school, uphill both ways, in the snow, barefoot" example to illustrate how rough things used to be. Then we'll add in just the context API, and finally turn it up to 11 by adding a higher-order component.
 
-Here's what we'll set out to build.
+Here's what we'll set out to build. Full source code for this project can be [found on GitHub](https://github.com/jacobsowles/react-context-api-demo 'GitHub - Jacob Sowles'). Each version is in its own branch for easy comparison.
 
 ![Puppy Growth](./demo.gif)
 
@@ -77,11 +77,11 @@ const ThemeToggle = ({ theme, toggleTheme }) => {
 
 Not much happening here. Each component gets the theme, then uses that information to conditionally display a certain set of content.
 
-With the pieces written this way, the project works just fine. And honestly, if a real-life project were this simple, I'd probably call it done right now, because [premature optimization is a thing](https://stackify.com/premature-optimization-evil/ 'Why Premature Optimization Is the Root of All Evil').
+With the pieces written this way, the project works just fine. And honestly, if the scope of a real-life project were this simple, I'd probably call it done right now, because [premature optimization is a thing](https://stackify.com/premature-optimization-evil/ 'Why Premature Optimization Is the Root of All Evil').
 
-But let's assume we need to make use of the theme state several components deep. For example, what if the `App` component renders a `Router` component, which renders a `HomePage` component, which renders a `Timeline` component, which renders the picture? Suddenly, the loading state is managed at the highest level (`App`) but needs to be passed all the way down to the `Timeline` component so that it can programatically render the appropriate content. (In some cases, you could just maintain the theme state closer to where it's being used, but it's common for many components in different parts of the tree to need access to the theme state, so bubbling it up to the lowest common parent component makes the most sense.)
+But let's assume we need to make use of the theme state several components deep. For example, what if the `App` component renders a `Router` component, which renders a `HomePage` component, which renders a `Timeline` component, which renders the picture? Suddenly, the loading state is managed at the highest level (`App`) but needs to be passed all the way down to the `Timeline` component so that it can programatically render the appropriate content. (In some cases, you could just maintain the state closer to where it's being used, but since themes are generally used app-wide, bubbling it up to the lowest common parent component makes the most sense.)
 
-The act of passing down props through several levels is known as [prop drilling](https://blog.kentcdodds.com/prop-drilling-bb62e02cb691 'Kent C. Dodds - Prop Drilling') and can be a real pain. If we were to add another component somewhere in the middle of the tree, we'd need to add a prop to receive and pass on the state, even if that component doesn't use that state. That's a bad code smell. But also consider implementing type security with PropTypes or TypeScript. For every component that receives the theme state as a prop, we'd need to update the interface or propTypes object to include it. For a project this size, it's not a big deal, but it would quickly get out of hand for a larger project. So let's fix it using the React Context API.
+The act of passing down props through several levels is known as [prop drilling](https://blog.kentcdodds.com/prop-drilling-bb62e02cb691 'Kent C. Dodds - Prop Drilling') and can be a real pain. If we were to add another component somewhere in the middle of the tree, we'd need to add a prop to receive and pass on the state, even if that component doesn't actually use that state. That's a [bad code smell](https://en.wikipedia.org/wiki/Code_smell 'Wikipedia - Code Smell'). But also consider implementing type security with PropTypes or TypeScript. For every component that receives the theme state as a prop, we'd need to update the interface or propTypes object to include it. For a project this size, it's not a big deal, but it would quickly get out of hand for a larger project. So let's fix it using the React Context API.
 
 ## Version 2: Adding Context
 
@@ -126,13 +126,13 @@ const ThemeConsumer = ThemeContext.Consumer;
 export { ThemeProvider, ThemeConsumer };
 ```
 
-There are two pieces of the context: a `Provider` and a `Consumer`. The provider is the mechanism by which the context is passed into a component, and the consumer is the mechanism by which that passed in context is accessed.
+There are two pieces of the context: a `Provider` and a `Consumer`. The provider is the mechanism by which the context is passed into a component, and the consumer is the mechanism by which that context is accessed.
 
-Given that, the `ThemeProvider` does a few things. First, it takes over the theme state management responsibilies from the `App` component. This in itself is nice because of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns 'Wikipedia - Separation of Concerns'): the theme is managed by the ThemeContext rather than the App (which also handles other things not related to the theme).
+Given that, the `ThemeProvider` does a few things. First, it takes over the theme state management responsibilies from the `App` component. This in itself is nice because of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns 'Wikipedia - Separation of Concerns'); the theme is managed by the ThemeContext rather than the App (which also handles other things not related to the theme).
 
 But more critically, managing the theme state here allows us to pass the state into our `ThemeProvider` so that the state can be later consumed by the provider's child components.
 
-Speaking of which, let's update our main render call:
+To that end, let's update our main render call:
 
 ```jsx
 import App from './components/App';
@@ -146,7 +146,7 @@ ReactDOM.render(
 );
 ```
 
-By wrapping our `App` component with the `ThemeProvider` every component within `App` will be able to use a `ThemeConsumer` to access the theme state. Like so:
+By wrapping our `App` component with the `ThemeProvider`, every component within `App` will be able to use a `ThemeConsumer` to access the theme state. Like so:
 
 ```jsx
 import { ThemeConsumer } from '../ThemeContext';
@@ -187,24 +187,20 @@ const ThemeToggle = () => {
 };
 ```
 
-And now that those components can access the theme state via the `ThemeConsumer`, we can remove the state management from our `App` component, as well as the props being passed into the `ThemeIndicator` and `ThemeToggle`.
+And now that those components can access the theme state via the `ThemeConsumer`, we can remove the state management from our `App` component, as well as the props being passed into the `ThemeIndicator` and `ThemeToggle`. We can also convert `App` from a `PureComponent` to a functional component since it's no longer stateful.
 
 ```jsx
-class App extends PureComponent {
-  render() {
-    return (
-      <div className="app">
-        <ThemeIndicator />
-        <ThemeToggle />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="app">
+    <ThemeIndicator />
+    <ThemeToggle />
+  </div>
+);
 ```
 
-We've now eliminated prop drilling, and with it the hastle of creating and maintaining those "pass-through" props and type safety. We could stop here and feel pretty good about what we've accomplished. But personally, I'm still not satisfied with the level of code duplication. Every component that uses the theme state has to be wrapped in the `ThemeConsumer`. Those components are also pretty syntax-heavy due to the [render props](https://reactjs.org/docs/render-props.html 'reactjs.org - Render Props').
+We've now eliminated prop drilling, and with it the hastle of creating and maintaining those "pass-through" props and type safety. We could stop here and feel pretty good about what we've accomplished. But personally, I'm still not satisfied with the level of code duplication. Every component that uses the theme state has to be wrapped in a `ThemeConsumer`. Those components are also pretty syntax-heavy due to the [render props](https://reactjs.org/docs/render-props.html 'reactjs.org - Render Props').
 
-I don't want to be required to remember or understand any of the implementatino details of the `ThemeContext`. I just want to use it. It may seem trivial now, but Future You will be greatful, because Future You probably isn't going to remember building this. And your teammates will love you, because they can just use what you built without having to spend time learning about it.
+I don't want to have to remember or understand any of the implementation details of the `ThemeContext`. I just want to use it. It may seem trivial now, but Future You will be grateful, because Future You probably isn't going to remember building this. And your teammates will love you, because they can just use what you built without having to spend time learning about it.
 
 So let's improve the developer ergonomics by wrapping our context in a higher-order component.
 
@@ -263,7 +259,7 @@ export default withTheme(ThemeToggle);
 
 Now the repeated `ThemeConsumer` wrappers are gone, and we don't have to deal with the render props anymore.
 
-Future You or your teammates may wonder "Where does the `themeContext` prop come from?" But the beauty of this pattern is that **it doesn't matter**. The `themeContext` could be delivered by an [unladen swallow](https://www.youtube.com/watch?v=liIlW-ovx0Y&t=1m24s 'YouTube - Monty Python and the Holy Grail') and it wouldn't make a difference.
+Future You or your teammates may wonder "Where does the `themeContext` prop come from?", but the beauty of this pattern is that **it doesn't matter**. The `themeContext` could be delivered by an [unladen swallow](https://www.youtube.com/watch?v=liIlW-ovx0Y&t=1m24s 'YouTube - Monty Python and the Holy Grail') and it wouldn't make any difference.
 
 This pattern scales very easily as well. If another component is created and needs access to the theme, all we'd have to do is add the context prop and wrap the export with the `withTheme` function.
 
