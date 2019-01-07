@@ -46,7 +46,7 @@ class AboutPage extends React.Component {
                 I continually ask myself, "Is what I'm doing adding value?".
                 It's easy to get bogged down optimizing code into oblivion, but
                 ultimately, we're building the software for a reason: to provide
-                value to the users. Great code that ships is better than good
+                value to the users. Great code that ships is better than perfect
                 code that doesn't. And code that ships should have concrete
                 benefits for the users.
               </p>
@@ -60,10 +60,10 @@ class AboutPage extends React.Component {
 
               <p>
                 I lead when my skill set aligns with the task at hand, and I
-                defer to (and learn from) others when I recognize that I’m
+                seek out (and learn from) others when I recognize that I’m
                 deficient in a particular area. Pretending to understand
                 something, or exaggerating the extent to which one understands
-                something, is damaging and selfish.
+                something, is damaging and expensive.
               </p>
             </div>
           </div>
@@ -100,9 +100,9 @@ class AboutPage extends React.Component {
                 I regularly evaluate what I know, what I don't know, what I'm
                 doing that's working, and what I'm doing that's not. This
                 critical analysis of myself and my systems prevents me from
-                getting stuck in one pattern of thinking and acting that may no
-                longer be ideal. I often look to others (peers, authors,
-                friends) to expose myself to new ideas.
+                getting stuck in one pattern of thinking and acting in a way
+                that may no longer be ideal. I often look to others (peers,
+                authors, friends) to expose myself to new ideas.
               </p>
             </div>
           </div>
