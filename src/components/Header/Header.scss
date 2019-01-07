@@ -169,3 +169,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 469px) {
+  .navbar {
+    .navbar-collapse.collapsing,
+    .navbar-collapse.in {
+      ul li a {
+        padding-top: 20px;
+      }
+    }
+  }
+}
