@@ -1,4 +1,2 @@
 # Personal website of Jacob Sowles
-Built in [gatsbyJS](https://www.gatsbyjs.org)
-
-[JacobSowles.com](https://jacobsowles.com)
+Built with [GatsbyJS](https://www.gatsbyjs.org). Check it out at [https://jacobsowles.com](https://jacobsowles.com).
