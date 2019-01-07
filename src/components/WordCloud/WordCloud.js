@@ -1,5 +1,9 @@
 import React from 'react';
 
-const WordCloud = () => <img src="wordcloud.png" alt="word cloud" />;
+import './WordCloud.scss';
+
+const WordCloud = () => (
+  <img className="wordcloud" src="skills-wordcloud.png" alt="word cloud" />
+);
 
 export default WordCloud;

@@ -40,8 +40,22 @@ class SkillsPage extends React.Component {
               check out my work on GitHub
             </a>{' '}
             (though understand that much of my professional work is not publicly
-            available). That said, the following word cloud is a decent
-            high-level representation of my strongest technical skills.
+            available).
+          </p>
+
+          <p>
+            Additionally, my greatest strengths aren't frameworks or languages;
+            they're{' '}
+            <strong>
+              problem-solving, debugging, rapid learning, and{' '}
+              <Link to="/about">how I operate as a professional</Link>
+            </strong>
+            .
+          </p>
+
+          <p>
+            That said, the following word cloud is a decent high-level
+            representation of my strongest technical skills.
           </p>
 
           <WordCloud />
