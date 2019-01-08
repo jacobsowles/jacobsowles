@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React from 'react';
 
 import BlogPostSnippet from '../components/BlogPostSnippet';
@@ -11,11 +11,11 @@ init();
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+    const { description, title } = data.site.siteMetadata;
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={title}>
         <SEO
           description="A blog about software, technology, productivity, and more"
           keywords={[
@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
             `react`,
             `software development`,
           ]}
-          title="All posts"
+          title={`${description}`}
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
+        description
         title
       }
     }
