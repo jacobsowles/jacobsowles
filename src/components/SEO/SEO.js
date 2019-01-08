@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:card`,
-                content: `summary`,
+                content: profileImage,
               },
               {
                 name: `twitter:creator`,
@@ -62,9 +62,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
-          >
-            <meta property="og:image" content={profileImage} />
-          </Helmet>
+          />
         );
       }}
     />
