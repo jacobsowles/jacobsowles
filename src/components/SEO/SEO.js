@@ -38,11 +38,15 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:card`,
-                content: profileImage,
+                content: `summary`,
               },
               {
                 name: `twitter:creator`,
                 content: data.site.siteMetadata.author,
+              },
+              {
+                name: `twitter:image`,
+                content: profileImage,
               },
               {
                 name: `twitter:title`,
