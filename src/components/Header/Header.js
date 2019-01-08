@@ -19,7 +19,7 @@ function Header({ isRootPath, title }) {
             <div className="header-text-wrapper">
               {titleHtml}
               <p className="tagline">
-                Full-stack developer. Aspiring everything-elser.
+                Full-stack developer, aspiring everything-elser
               </p>
             </div>
           </Link>

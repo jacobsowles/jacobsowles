@@ -2,9 +2,22 @@ import './App.scss';
 
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { far, faAddressCard, faBuilding } from '@fortawesome/free-regular-svg-icons';
-import { faMapMarkerAlt, faCogs, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  fab,
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  far,
+  faAddressCard,
+  faBuilding,
+} from '@fortawesome/free-regular-svg-icons';
+import {
+  faMapMarkerAlt,
+  faCogs,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
 import Profile from '../Profile/Profile';
 import ProfileInfoList from '../ProfileInfoList/ProfileInfoList';
 import ProfileInfoListItem from '../ProfileInfoListItem/ProfileInfoListItem';
@@ -30,10 +43,13 @@ const App = () => {
       <main role="main">
         <Profile
           name="Jacob Sowles"
-          tagline="Full-stack software developer, chronic automator, and aspiring everything-elser"
+          tagline="Full-stack software developer, aspiring everything-elser"
         >
           <ProfileInfoList>
-            <ProfileInfoListItem icon={faMapMarkerAlt} text="Portland, Oregon" />
+            <ProfileInfoListItem
+              icon={faMapMarkerAlt}
+              text="Portland, Oregon"
+            />
             <ProfileInfoListItem
               icon={faBuilding}
               text="Vespa Group"
