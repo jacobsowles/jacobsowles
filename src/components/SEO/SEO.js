@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import profileImage from '../../../content/assets/profile-photo.jpg';
-
 function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
@@ -19,8 +17,12 @@ function SEO({ description, lang, meta, keywords, title }) {
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               { name: `description`, content: metaDescription },
-              { property: `og:title`, content: title },
               { property: `og:description`, content: metaDescription },
+              {
+                property: `og:image`,
+                content: `https://avatars0.githubusercontent.com/u/2268824?s=460&v=4`,
+              },
+              { property: `og:title`, content: title },
               { property: `og:type`, content: `website` },
               { name: `twitter:card`, content: `summary_large_image` },
               {
@@ -28,7 +30,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: data.site.siteMetadata.author,
               },
               { name: `twitter:description`, content: metaDescription },
-              { name: `twitter:image`, content: profileImage },
+              {
+                name: `twitter:image`,
+                content: `https://avatars0.githubusercontent.com/u/2268824?s=460&v=4`,
+              },
               {
                 name: `twitter:site`,
                 content: data.site.siteMetadata.social.twitter,
