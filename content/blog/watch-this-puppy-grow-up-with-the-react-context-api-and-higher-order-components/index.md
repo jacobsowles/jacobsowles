@@ -270,3 +270,5 @@ We could even extract our `ThemeContext` and `withTheme` components into a separ
 ---
 
 While this project may not be much more than a toy problem, this higher-order-component-wrapped context API pattern can be applied in a number of ways, like visual themes (light, dark, etc.), localization, routing, and more. I encourage you to give it a shot and see what you come up with.
+
+_Join the conversation about this post [over at Medium](https://medium.com/@jacobsowles/watch-this-puppy-grow-up-with-the-react-context-api-and-higher-order-components-6171ad6c5b7 'Medium - Watch This Puppy Grow Up With the React Context API and Higher-order Components')._
