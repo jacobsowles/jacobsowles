@@ -134,3 +134,5 @@ Second, most tasks that you're assigned do have _some_ value to you, even if tha
 ## Wrapping Up
 
 I said it earlier. But it's worth repeating: measure your productivity in value added, not tasks completed. Cranking out tasks that don't make things better for you or someone else isn't helpful; it's just busy-work. So if you've struggled with this like I have, give this system a shot and see how it goes. And if you have any modifications to the system that work for you, I'd love to hear about them.
+
+_Join the conversation about this post [over at Medium](https://medium.com/@jacobsowles/stop-counting-tasks-and-start-maximizing-value-62da54f6b48e 'Medium - Stop Counting Tasks and Start Maximizing Value')._
