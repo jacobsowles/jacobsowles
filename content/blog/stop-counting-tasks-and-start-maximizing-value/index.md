@@ -51,7 +51,7 @@ I alphabetize my tasks because my brain won't let me not do that, but I have a k
 ## The Value List
 
 ![man selecting books from a pile](./value-list.jpg)
-<small>_Hand-selecting a few tasks from the Triage List to be added to the Value List.. Photo by [Clem Onojeghuo](https://bit.ly/2VKe3Mo 'Clem Onojeghuo') on [Unsplash](https://bit.ly/2FIHlq7 'Unsplash')._</small>
+<small>_Hand-selecting a few tasks from the Triage List to be added to the Value List. Photo by [Clem Onojeghuo](https://bit.ly/2VKe3Mo 'Clem Onojeghuo') on [Unsplash](https://bit.ly/2FIHlq7 'Unsplash')._</small>
 
 ---
 
