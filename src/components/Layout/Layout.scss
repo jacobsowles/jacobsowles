@@ -102,6 +102,16 @@ body {
     }
   }
 
+  small {
+    display: block;
+    font-style: italic;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
   .gatsby-resp-image-wrapper {
     max-width: 100% !important;
   }
