@@ -17,8 +17,6 @@ Here's what we'll set out to build. Full source code for this project can be [fo
 
 ## Version 1: No Frills
 
----
-
 To start with, let's create the simplest working version and not get too bogged down in optimization.
 
 I generally write the main component first and stub out the details, then fill in the gaps after I fully understand the flow of what I'm trying to achieve. So here's the `App` component.
@@ -88,8 +86,6 @@ The act of passing down props through several levels is known as [prop drilling]
 But also consider implementing type security with PropTypes or TypeScript. For every component that receives the theme state as a prop, we'd need to update the interface or propTypes object to include it. For a project this size, it's not a big deal, but it would quickly get out of hand for a larger project. So let's fix it using the React Context API.
 
 ## Version 2: Adding Context
-
----
 
 First, let's create the `ThemeContext` itself.
 
@@ -210,8 +206,6 @@ So let's improve the developer ergonomics by wrapping our context in a higher-or
 
 ## Version 3: Adding a Higher-order Component
 
----
-
 ```jsx
 import { ThemeConsumer } from '../components/ThemeContext';
 
@@ -270,8 +264,6 @@ This pattern scales very easily as well. If another component is created and nee
 We could even extract our `ThemeContext` and `withTheme` components into a separate package and enable the seamless use of theme customization across different projects. That would require some upgrades to the `ThemeContext` to make it truly useful, but I'll leave that challenge to you.
 
 ## Wrapping Up
-
----
 
 While this project may not be much more than a toy problem, this higher-order-component-wrapped context API pattern can be applied in a number of ways, like visual themes (light, dark, etc.), localization, routing, and more. I encourage you to give it a shot and see what you come up with.
 

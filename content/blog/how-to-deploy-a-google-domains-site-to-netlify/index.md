@@ -15,11 +15,11 @@ One option is to just transfer the domain to Netlify and let them handle everyth
 
 But fear not. The rest of this post will show how I deployed my site to Netlify while keeping G Suite up and running.
 
-# Step 1: A deployment like any other
+## Step 1: A deployment like any other
 
 Netlify has a great [deployment guide](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/ 'Netlify deployment guide'), and that's what I followed to get my site up and running-. It will walk you through setting up the site configuration, linking your version-control tool of choice, and setting up automated builds and deploys.
 
-# Step 2: Update nameservers
+## Step 2: Update nameservers
 
 Since your domain is registered with Google (and you want to keep it that way), you'll need to update your Google Domain nameservers to point to Netlify.
 
@@ -33,7 +33,7 @@ Now head over to your Google Domains DNS Settings page (https://domains.google.c
 
 Now you've got your domain pointing to Netlify, but Google has a problem with this. You'll see the scary yellow warning from the top of this post in your Google DNS settings. Your Gmail is currently broken, but don't worry. We can rebuild it. We have the technology.
 
-# Step 3: Set up MX Records
+## Step 3: Set up MX Records
 
 [According to Wikipedia](https://en.wikipedia.org/wiki/MX_record 'Wikipedia - MX Record'), a mail exchanger record (MX record) specifies the mail server responsible for accepting email messages on behalf of a domain name. Google had this all set up for us, but since we're now using Netlify for our DNS settings, we lose all of our Google DNS settings, which includes the MX records.
 
@@ -55,7 +55,7 @@ Your Value field may be different than mine, so make sure to copy-paste from you
 
 Hit **Save** and repeat the process for your remaining MX records.
 
-# Step 4: Test
+## Step 4: Test
 
 At this point, your Netlify DNS records should look something like this:
 
