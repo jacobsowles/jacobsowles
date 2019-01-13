@@ -57,7 +57,7 @@ Hit **Save** and repeat the process for your remaining MX records.
 
 At this point, your Netlify DNS records should look something like this:
 
-![Netlify DNS records](./netlify-dns-record.png)
+![Netlify DNS records](./netlify-dns-records.png)
 
 To make sure everything's set up properly, navigate to all four permutations of your site:
 
