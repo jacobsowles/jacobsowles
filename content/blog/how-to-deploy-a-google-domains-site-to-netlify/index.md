@@ -3,6 +3,8 @@ title: How to Deploy a Google Domains Site to Netlify
 date: '2019-01-13'
 ---
 
+![Google to Netlify](./banner.png)
+
 I migrated jacobsowles.com to Netlify and received a scary message from Google Domains when following Netlify's deployment guide.
 
 ![google warning](./google-warning.png)
