@@ -66,7 +66,7 @@ To make sure everything's set up properly, navigate to all four permutations of 
 3. https without www
 4. https with www
 
-If any of those don't work, wait a few minutes and try again. DNS settings can take up to 24 hours to propogate (although mine were up and ready to go in about 10 minutes).
+If any of those don't work, wait a few minutes and try again. DNS settings can take up to 24 hours to propagate (although mine were up and ready to go in about 10 minutes).
 
 Now send yourself an email to your G Suite address to make sure you're receiving email properly. Once again, if it doesn't go through, wait for a bit and try again.
 
