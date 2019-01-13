@@ -73,3 +73,5 @@ If any of those don't work, wait a few minutes and try again. DNS settings can t
 Now send yourself an email to your G Suite address to make sure you're receiving email properly. Once again, if it doesn't go through, wait for a bit and try again.
 
 Once those tests check out, you're done.
+
+_Join the conversation about this post [over at Medium](https://medium.com/@jacobsowles/how-to-deploy-a-google-domains-site-to-netlify-c62793d8c95e 'Medium - How to Deploy a Google Domains Site to Netlify')._
