@@ -33,7 +33,7 @@ Now head over to your Google Domains DNS Settings page (https://domains.google.c
 
 Now you've got your domain pointing to Netlify, but Google has a problem with this. You'll see the scary yellow warning from the top of this post in your Google DNS settings. Your Gmail is currently broken, but don't worry. We can rebuild it. We have the technology.
 
-## Step 3: Set up MX Records
+## Step 3: Set up MX records
 
 [According to Wikipedia](https://en.wikipedia.org/wiki/MX_record 'Wikipedia - MX Record'), a mail exchanger record (MX record) specifies the mail server responsible for accepting email messages on behalf of a domain name. Google had this all set up for us, but since we're now using Netlify for our DNS settings, we lose all of our Google DNS settings, which includes the MX records.
 
