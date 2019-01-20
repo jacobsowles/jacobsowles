@@ -35,7 +35,7 @@ class SkillsPage extends React.Component {
           <p>
             I make it a priority to constantly grow and diversify my skillset,
             so the best way to learn specifics is to{' '}
-            <Link to="/contact">get in touch</Link> or{' '}
+            <Link to="/contact/">get in touch</Link> or{' '}
             <a href={`https://github.com/${metadata.social.github}`}>
               check out my work on GitHub
             </a>{' '}
@@ -48,7 +48,7 @@ class SkillsPage extends React.Component {
             they're{' '}
             <strong>
               problem-solving, debugging, rapid learning, and{' '}
-              <Link to="/about">how I operate as a professional</Link>
+              <Link to="/about/">how I operate as a professional</Link>
             </strong>
             .
           </p>

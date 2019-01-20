@@ -32,13 +32,13 @@ function Header({ isRootPath, title }) {
             <Link to="/">Blog</Link>
           </ListItem>
           <ListItem>
-            <Link to="/about">About</Link>
+            <Link to="/about/">About</Link>
           </ListItem>
           <ListItem>
-            <Link to="/skills">Skills</Link>
+            <Link to="/skills/">Skills</Link>
           </ListItem>
           <ListItem>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact/">Contact</Link>
           </ListItem>
         </Nav>
       </Navbar.Collapse>

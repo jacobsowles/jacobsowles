@@ -36,8 +36,8 @@ class AboutPage extends React.Component {
 
           <p>
             I'm Jacob. The best way to learn about me is to{' '}
-            <Link to="/contact">get in touch</Link>. But here are some words and
-            phrases that illustrate pieces of who I am and how I work.
+            <Link to="/contact/">get in touch</Link>. But here are some words
+            and phrases that illustrate pieces of who I am and how I work.
           </p>
 
           <div className="text-with-image-wrapper">
