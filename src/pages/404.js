@@ -8,8 +8,14 @@ class NotFoundPage extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO description="Page not found" title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist.</p>
+
+        <div className="content-box">
+          <h1>Not found</h1>
+
+          <hr />
+
+          <p>The page you requested has moved or doesn't exist.</p>
+        </div>
       </Layout>
     );
   }
