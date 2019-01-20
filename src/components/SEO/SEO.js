@@ -14,17 +14,19 @@ function SEO({ description, lang, meta, keywords, title }) {
           <Helmet
             htmlAttributes={{ lang }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s - ${data.site.siteMetadata.title}`}
             meta={[
               { name: `description`, content: metaDescription },
               { property: `og:description`, content: metaDescription },
               {
                 property: `og:image`,
-                content: `https://avatars0.githubusercontent.com/u/2268824?s=460&v=4`,
+                content: `https://sowleshomes.com${
+                  data.cardImage.childImageSharp.fluid.src
+                }`,
               },
               { property: `og:title`, content: title },
               { property: `og:type`, content: `website` },
-              { name: `twitter:card`, content: `summary_large_image` },
+              { name: `twitter:card`, content: `summary` },
               {
                 name: `twitter:creator`,
                 content: data.site.siteMetadata.author,
@@ -32,7 +34,9 @@ function SEO({ description, lang, meta, keywords, title }) {
               { name: `twitter:description`, content: metaDescription },
               {
                 name: `twitter:image`,
-                content: `https://avatars0.githubusercontent.com/u/2268824?s=460&v=4`,
+                content: `https://sowleshomes.com${
+                  data.cardImage.childImageSharp.fluid.src
+                }`,
               },
               {
                 name: `twitter:site`,
@@ -71,6 +75,13 @@ export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
+    cardImage: file(relativePath: { regex: "/profile-photo.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     site {
       siteMetadata {
         description
