@@ -32,9 +32,7 @@ class BlogIndex extends React.PureComponent {
           const title = node.frontmatter.title || node.fields.slug;
 
           return (
-            <div className="content-box" key={node.fields.slug}>
-              <BlogPostSnippet node={node} title={title} />
-            </div>
+            <BlogPostSnippet key={node.fields.slug} node={node} title={title} />
           );
         })}
       </Layout>
@@ -62,6 +60,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM D, YYYY")
             title
+            featuredImage {
+              childImageSharp {
+                sizes(maxWidth: 400) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }

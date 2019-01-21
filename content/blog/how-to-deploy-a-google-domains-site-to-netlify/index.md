@@ -1,6 +1,7 @@
 ---
 title: How to Deploy a Google Domains Site to Netlify
 date: '2019-01-13'
+featuredImage: './banner.png'
 ---
 
 ![Google to Netlify](./banner.png)

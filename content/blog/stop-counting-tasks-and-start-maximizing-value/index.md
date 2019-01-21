@@ -1,6 +1,7 @@
 ---
 title: Stop Counting Tasks and Start Maximizing Value
 date: '2019-01-11'
+featuredImage: './banner.jpeg'
 ---
 
 ![bad todo list](./banner.jpeg)

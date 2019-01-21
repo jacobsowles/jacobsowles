@@ -1,6 +1,7 @@
 ---
 title: Watch This Puppy Grow Up With the React Context API and Higher-order Components
 date: '2019-01-05'
+featuredImage: './banner.png'
 ---
 
 ![Puppy](./banner.png)

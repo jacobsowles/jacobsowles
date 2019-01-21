@@ -4,20 +4,41 @@
   h3 {
     font-size: 1.5em;
     line-height: 1.5em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
+    a:focus,
     a:hover {
       text-decoration: none;
     }
   }
 
-  hr {
-    margin: 10px 0;
+  p {
+    margin-bottom: 10px;
   }
 
   small {
     display: inline;
     font-style: normal;
     opacity: 0.8;
+  }
+
+  .gatsby-image-wrapper {
+    margin-left: 30px;
+    width: 250px;
+
+    img {
+      height: auto !important;
+      object-fit: initial !important;
+      object-position: initial !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-post-snippet {
+    .gatsby-image-wrapper {
+      margin: 30px 0 0 0;
+      width: 100%;
+    }
   }
 }
