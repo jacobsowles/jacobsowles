@@ -6,10 +6,11 @@ import './BlogPost.scss';
 const BlogPost = ({ next, post, previous }) => {
   return (
     <div className="blog-post">
-      <small>{post.frontmatter.date}</small>
       <h1>{post.frontmatter.title}</h1>
 
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+      <small className="date">{post.frontmatter.date}</small>
 
       {(previous || next) && <hr />}
 
