@@ -24,7 +24,7 @@ Netlify has a great [deployment guide](https://www.netlify.com/blog/2016/09/29/a
 
 Since your domain is registered with Google (and you want to keep it that way), you'll need to update your Google Domain nameservers to point to Netlify.
 
-Grab the list of Netlify nameservers from your DNS Settings page here: https://app.netlify.com/account/dns/yoursite.com.
+Grab the list of Netlify nameservers from your [DNS Settings](https://app.netlify.com/account/dns/yoursite.com 'Netlify DNS Settings') page (make sure to change `yoursite.com` at the end of the URL to your actual domain).
 
 ![Netlify nameservers](./netlify-nameservers.png)
 
