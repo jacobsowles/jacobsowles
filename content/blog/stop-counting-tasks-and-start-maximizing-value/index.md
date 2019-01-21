@@ -4,8 +4,6 @@ date: '2019-01-11'
 featuredImage: './banner.jpeg'
 ---
 
-![bad todo list](./banner.jpeg)
-
 Measuring productivity by the number of tasks completed is essentially the same as measuring it by the number of hours worked, and we know better than that. Not all tasks are created equal, and it's incredibly easy to manufacture work for ourselves that doesn't actually provide much (if any) concrete value.
 
 ## Case Study

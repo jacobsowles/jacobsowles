@@ -4,8 +4,6 @@ date: '2019-01-05'
 featuredImage: './banner.png'
 ---
 
-![Puppy](./banner.png)
-
 The [React Context API](https://reactjs.org/docs/context.html 'reactjs.org - Context API') is a great way to pass pieces of data around the component tree without having to pass them through each intermediate component. This allows us to reduce code duplication and make ongoing application maintenance easier.
 
 But we can take things a step further by wrapping the context API in a [higher-order component](https://reactjs.org/docs/higher-order-components.html 'reactjs.org - Higher-order Components') to get the power of contexts while hiding the implementation details and mitigating the syntax bloat that comes with it.
