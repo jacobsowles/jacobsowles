@@ -1,35 +1,68 @@
+import classNames from 'classnames';
+import Image from 'gatsby-image';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Footer from '../Footer';
 import Header from '../Header';
+import '../../styles/index.scss';
 import './Layout.scss';
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props;
+    const {
+      backgroundColor,
+      backgroundImage,
+      children,
+      location,
+      title,
+    } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
     const isRootPath = location.pathname === rootPath;
 
     return (
       <div className="layout">
-        <div className="row row__header row__white">
-          <header className="row-content" role="banner">
+        <section className="section section__header section__white">
+          <header className="section-container" role="banner">
             <Header isRootPath={isRootPath} title={title} />
           </header>
-        </div>
+        </section>
 
-        <div className="row row__main row__light">
-          <main className="row-content">{children}</main>
-        </div>
+        <section
+          className={classNames(
+            'section',
+            'section__main',
+            backgroundImage
+              ? 'section__background-image'
+              : `section__${backgroundColor}`
+          )}
+        >
+          {backgroundImage && <Image fluid={backgroundImage} />}
+          <main className="section-container" role="main">
+            {children}
+          </main>
+        </section>
 
-        <div className="row row__dark row__footer">
-          <div className="row-content">
+        <section className="section section__dark section__footer">
+          <div className="section-container">
             <Footer />
           </div>
-        </div>
+        </section>
       </div>
     );
   }
 }
+
+Layout.propTypes = {
+  backgroundColor: PropTypes.oneOf(['light', 'white']),
+  backgroundImage: PropTypes.object,
+  location: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+Layout.defaultProps = {
+  backgroundColor: 'white',
+  backgroundImage: undefined,
+};
 
 export default Layout;

@@ -1,9 +1,8 @@
 .blog-post {
   h1 {
-    font-size: 1.5em;
-    line-height: 1.5em;
+    font-size: 3em;
+    line-height: 1.2em;
     margin-bottom: 5px;
-    margin-top: 15px !important;
   }
 
   h2 {
@@ -19,11 +18,23 @@
     max-width: 100%;
   }
 
-  small.date {
+  .date {
+    font-size: 1em;
     font-style: normal;
     margin-top: 20px;
     opacity: 0.8;
     text-align: left;
+  }
+
+  .gatsby-image-wrapper {
+    margin-left: 30px;
+    width: 350px;
+
+    img {
+      height: auto !important;
+      object-fit: initial !important;
+      object-position: initial !important;
+    }
   }
 
   .post-navigation-links {

@@ -15,9 +15,9 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
 
-        <div className="content-box">
+        <article>
           <BlogPost next={next} post={post} previous={previous} />
-        </div>
+        </article>
       </Layout>
     );
   }
@@ -38,8 +38,15 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       frontmatter {
-        title
         date(formatString: "MMMM D, YYYY")
+        featuredImage {
+          childImageSharp {
+            sizes(maxWidth: 400) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        title
       }
     }
   }

@@ -3,19 +3,17 @@ import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import './BlogPostSnippet.scss';
+import './BlogPostExcerpt.scss';
 
-const BlogPostSnippet = ({ node, title }) => {
+const BlogPostExcerpt = ({ node, title }) => {
   return (
-    <div className="blog-post-snippet content-box">
+    <article className="blog-post-excerpt">
       <div
         style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}
       >
         <div style={{ flex: '1' }}>
           <h3>
-            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-              {title}
-            </Link>
+            <Link to={node.fields.slug}>{title}</Link>
           </h3>
 
           <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
@@ -25,13 +23,13 @@ const BlogPostSnippet = ({ node, title }) => {
 
         <Image sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
       </div>
-    </div>
+    </article>
   );
 };
 
-BlogPostSnippet.propTypes = {
+BlogPostExcerpt.propTypes = {
   node: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
 };
 
-export default BlogPostSnippet;
+export default BlogPostExcerpt;

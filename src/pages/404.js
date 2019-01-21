@@ -9,10 +9,8 @@ class NotFoundPage extends React.PureComponent {
       <Layout location={this.props.location}>
         <SEO description="Page not found" title="404: Not Found" />
 
-        <div className="content-box">
-          <h1>Not found</h1>
-          <p>The page you requested has moved or doesn't exist.</p>
-        </div>
+        <h1>Not found</h1>
+        <p>The page you requested has moved or doesn't exist.</p>
       </Layout>
     );
   }

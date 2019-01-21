@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import Image from 'gatsby-image';
 import React from 'react';
 
 import './BlogPost.scss';
@@ -6,11 +7,23 @@ import './BlogPost.scss';
 const BlogPost = ({ next, post, previous }) => {
   return (
     <div className="blog-post">
-      <h1>{post.frontmatter.title}</h1>
+      <div
+        style={{
+          alignItems: 'center',
+          display: 'flex',
+          flexWrap: 'wrap',
+          marginBottom: '60px',
+        }}
+      >
+        <div style={{ flex: '1' }}>
+          <h1>{post.frontmatter.title}</h1>
+          <small className="date">{post.frontmatter.date}</small>
+        </div>
+
+        <Image sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
+      </div>
 
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-      <small className="date">{post.frontmatter.date}</small>
 
       {(previous || next) && <hr />}
 
