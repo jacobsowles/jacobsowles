@@ -1,9 +1,18 @@
+@import '../../styles/variables';
+
 .blog-post-snippet {
+  h1 {
+    margin-bottom: 20px;
+  }
+
   h3 {
     font-size: 1.5em;
     line-height: 1.5em;
     margin-bottom: 5px;
-    margin-top: 15px;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   hr {
@@ -11,6 +20,8 @@
   }
 
   small {
-    font-style: italic;
+    display: inline;
+    font-style: normal;
+    opacity: 0.8;
   }
 }

@@ -32,7 +32,7 @@ body {
 
     .row-content {
       margin: 0 auto;
-      max-width: 800px;
+      max-width: 1000px;
       padding: 0 20px;
 
       .content-box:last-child {
@@ -75,8 +75,8 @@ body {
 .content-box {
   background: #ffffff;
   box-shadow: $box-shadow;
-  margin-bottom: 10px;
-  padding: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
 
   h1,
   h3 {
@@ -110,10 +110,6 @@ body {
     &:first-child {
       text-align: left;
     }
-  }
-
-  .gatsby-resp-image-wrapper {
-    max-width: 100% !important;
   }
 
   .text-with-image-wrapper {

@@ -7,17 +7,15 @@ import './BlogPostSnippet.scss';
 const BlogPostSnippet = ({ node, title }) => {
   return (
     <div className="blog-post-snippet">
-      <small>{node.frontmatter.date}</small>
-
       <h3>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
           {title}
         </Link>
       </h3>
 
-      <hr />
-
       <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+
+      <small>{node.frontmatter.date}</small>
     </div>
   );
 };

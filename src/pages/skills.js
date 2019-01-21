@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import WordCloud from '../components/WordCloud';
 
-class SkillsPage extends React.Component {
+class SkillsPage extends React.PureComponent {
   render() {
     const { data } = this.props;
     const metadata = data.site.siteMetadata;
@@ -29,8 +29,6 @@ class SkillsPage extends React.Component {
         />
         <div className="content-box">
           <h1>Top skills at a glance</h1>
-
-          <hr />
 
           <p>
             I make it a priority to constantly grow and diversify my skillset,

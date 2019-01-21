@@ -8,7 +8,7 @@ import egoImage from '../../content/assets/ego.png';
 import introspectiveImage from '../../content/assets/introspective.png';
 import valueImage from '../../content/assets/value.png';
 
-class AboutPage extends React.Component {
+class AboutPage extends React.PureComponent {
   render() {
     const { data } = this.props;
     const { social, title } = data.site.siteMetadata;
@@ -31,8 +31,6 @@ class AboutPage extends React.Component {
 
         <div className="content-box">
           <h1>About me</h1>
-
-          <hr />
 
           <p>
             I'm Jacob. The best way to learn about me is to{' '}

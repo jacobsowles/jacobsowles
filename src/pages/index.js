@@ -8,7 +8,7 @@ import { init } from '../utils/icons';
 
 init();
 
-class BlogIndex extends React.Component {
+class BlogIndex extends React.PureComponent {
   render() {
     const { data } = this.props;
     const { description, title } = data.site.siteMetadata;

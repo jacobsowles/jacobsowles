@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-class ContactPage extends React.Component {
+class ContactPage extends React.PureComponent {
   render() {
     const { data } = this.props;
     const { title, social } = data.site.siteMetadata;
@@ -29,8 +29,6 @@ class ContactPage extends React.Component {
 
         <div className="content-box">
           <h1>Get in touch</h1>
-
-          <hr />
 
           <p>
             The fastest way to get a hold of me is by{' '}
