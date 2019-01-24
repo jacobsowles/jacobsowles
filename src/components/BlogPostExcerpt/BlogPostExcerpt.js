@@ -7,7 +7,7 @@ import './BlogPostExcerpt.scss';
 
 const BlogPostExcerpt = ({ node, title }) => {
   return (
-    <div className="blog-post-excerpt">
+    <article className="blog-post-excerpt">
       <div
         style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}
       >
@@ -25,7 +25,7 @@ const BlogPostExcerpt = ({ node, title }) => {
 
         <Image sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
       </div>
-    </div>
+    </article>
   );
 };
 
