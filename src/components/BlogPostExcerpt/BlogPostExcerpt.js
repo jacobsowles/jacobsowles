@@ -3,11 +3,11 @@ import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import './BlogPostSnippet.scss';
+import './BlogPostExcerpt.scss';
 
-const BlogPostSnippet = ({ node, title }) => {
+const BlogPostExcerpt = ({ node, title }) => {
   return (
-    <div className="blog-post-snippet content-box">
+    <div className="blog-post-excerpt">
       <div
         style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}
       >
@@ -29,9 +29,9 @@ const BlogPostSnippet = ({ node, title }) => {
   );
 };
 
-BlogPostSnippet.propTypes = {
+BlogPostExcerpt.propTypes = {
   node: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
 };
 
-export default BlogPostSnippet;
+export default BlogPostExcerpt;

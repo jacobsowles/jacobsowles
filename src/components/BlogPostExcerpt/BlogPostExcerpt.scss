@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 
-.blog-post-snippet {
+.blog-post-excerpt {
   h3 {
     font-size: 1.5em;
     line-height: 1.5em;
@@ -35,7 +35,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .blog-post-snippet {
+  .blog-post-excerpt {
     .gatsby-image-wrapper {
       margin: 30px 0 0 0;
       width: 100%;
