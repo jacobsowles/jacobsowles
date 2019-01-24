@@ -1,6 +1,6 @@
 @import '../styles/variables';
 
-.content-card {
+.content-card-component {
   box-shadow: $box-shadow;
 
   &:last-child {
@@ -8,6 +8,6 @@
   }
 }
 
-.image-supported-text {
+.image-supported-text-component {
   border: 1px solid $border-grey;
 }

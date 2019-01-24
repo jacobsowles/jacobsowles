@@ -1,11 +1,10 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
 const ContentCard = ({ className, children, title }) => (
-  <Root className={classNames('content-card', className)}>
-    {title && <h1>{title}</h1>}
+  <Root className={className}>
+    {title && <Title>{title}</Title>}
     {children}
   </Root>
 );
@@ -16,7 +15,7 @@ ContentCard.propTypes = {
 };
 
 ContentCard.defaultProps = {
-  className: undefined,
+  className: 'content-card-component',
   title: undefined,
 };
 
@@ -25,13 +24,13 @@ const Root = styled.div`
   margin-bottom: 20px;
   padding: 30px;
 
-  & > h1 {
-    margin-top: 0;
-  }
-
   p:last-child {
     margin-bottom: 0;
   }
+`;
+
+const Title = styled.h1`
+  margin-top: 0;
 `;
 
 export default ContentCard;

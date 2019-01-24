@@ -1,21 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-import './BioInfoItem.scss';
-
-const BioInfoItem = ({ icon, text, url }) => {
+const BioInfoItem = ({ className, icon, text, url }) => {
   const itemText = url ? <a href={url}>{text}</a> : text;
 
   return (
-    <span className="bio-info-item">
+    <Root className={className}>
       <FontAwesomeIcon icon={icon} />
       {itemText}
-    </span>
+    </Root>
   );
 };
 
 BioInfoItem.propTypes = {
+  className: PropTypes.string,
   icon: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.object,
@@ -26,7 +26,14 @@ BioInfoItem.propTypes = {
 };
 
 BioInfoItem.defaultProps = {
+  className: 'bio-info-item-component',
   url: undefined,
 };
+
+const Root = styled.span`
+  svg {
+    margin-right: 10px;
+  }
+`;
 
 export default BioInfoItem;
