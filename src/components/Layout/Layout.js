@@ -11,21 +11,21 @@ class Layout extends React.Component {
 
     return (
       <div className="layout">
-        <div className="row row__header row__white">
-          <header className="row-content" role="banner">
+        <section className="section section__header section__white">
+          <header className="section-content" role="banner">
             <Header title={title} />
           </header>
-        </div>
+        </section>
 
-        <div className="row row__main row__light">
-          <main className="row-content">{children}</main>
-        </div>
+        <section className="section section__main section__light">
+          <main className="section-content">{children}</main>
+        </section>
 
-        <div className="row row__dark row__footer">
-          <div className="row-content">
+        <section className="section section__dark section__footer">
+          <div className="section-content">
             <Footer />
           </div>
-        </div>
+        </section>
       </div>
     );
   }
