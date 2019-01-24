@@ -2,6 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 
 import ContentCard from '../components/ContentCard';
+import ImageSupportedText from '../components/ImageSupportedText';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import communityImage from '../../content/assets/community.png';
@@ -37,7 +38,7 @@ class AboutPage extends React.PureComponent {
             and phrases that illustrate pieces of who I am and how I work.
           </p>
 
-          <div className="text-with-image-wrapper">
+          <ImageSupportedText>
             <img src={valueImage} alt="happy users" />
 
             <div>
@@ -52,9 +53,9 @@ class AboutPage extends React.PureComponent {
                 benefits for the users.
               </p>
             </div>
-          </div>
+          </ImageSupportedText>
 
-          <div className="text-with-image-wrapper">
+          <ImageSupportedText>
             <img src={egoImage} alt="ego" />
             <div>
               <h2>Ego-free</h2>
@@ -67,9 +68,9 @@ class AboutPage extends React.PureComponent {
                 something, is damaging and expensive.
               </p>
             </div>
-          </div>
+          </ImageSupportedText>
 
-          <div className="text-with-image-wrapper">
+          <ImageSupportedText>
             <img src={communityImage} alt="open source" />
 
             <div>
@@ -91,9 +92,9 @@ class AboutPage extends React.PureComponent {
                 and attend meetups to share what I know and learn from others.
               </p>
             </div>
-          </div>
+          </ImageSupportedText>
 
-          <div className="text-with-image-wrapper">
+          <ImageSupportedText>
             <img src={introspectiveImage} alt="introspective" />
             <div>
               <h2>Introspective</h2>
@@ -106,7 +107,7 @@ class AboutPage extends React.PureComponent {
                 authors, friends) to expose myself to new ideas.
               </p>
             </div>
-          </div>
+          </ImageSupportedText>
         </ContentCard>
       </Layout>
     );
