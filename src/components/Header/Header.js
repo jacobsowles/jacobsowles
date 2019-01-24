@@ -6,9 +6,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import Logo from '../Logo';
 import './Header.scss';
 
-function Header({ isRootPath, title }) {
-  const titleHtml = isRootPath ? <h1>{title}</h1> : <h3>{title}</h3>;
-
+function Header({ title }) {
   return (
     <Navbar className="header">
       <Navbar.Header>
@@ -17,7 +15,7 @@ function Header({ isRootPath, title }) {
             <Logo />
 
             <div className="header-text-wrapper">
-              {titleHtml}
+              <h1>{title}</h1>
               <p className="tagline">
                 Full-stack developer, aspiring everything-elser
               </p>
@@ -47,7 +45,6 @@ function Header({ isRootPath, title }) {
 }
 
 Header.propTypes = {
-  isRootPath: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
 };
 

@@ -7,15 +7,13 @@ import './Layout.scss';
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props;
-    const rootPath = `${__PATH_PREFIX__}/`;
-    const isRootPath = location.pathname === rootPath;
+    const { title, children } = this.props;
 
     return (
       <div className="layout">
         <div className="row row__header row__white">
           <header className="row-content" role="banner">
-            <Header isRootPath={isRootPath} title={title} />
+            <Header title={title} />
           </header>
         </div>
 
