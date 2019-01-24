@@ -25,10 +25,6 @@ const Root = styled.div`
   margin-bottom: 20px;
   padding: 30px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   & > h1 {
     margin-top: 0;
   }
