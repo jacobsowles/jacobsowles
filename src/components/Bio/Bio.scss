@@ -68,7 +68,7 @@
   }
 }
 
-@media only screen and (max-width: 551px) {
+@media only screen and (max-width: 564px) {
   .bio {
     .list-wrapper {
       display: flex;
@@ -79,7 +79,7 @@
   }
 }
 
-@media only screen and (max-width: 431px) {
+@media only screen and (max-width: 444px) {
   .bio {
     .bio-info-list {
       margin-bottom: 20px;
@@ -87,7 +87,7 @@
 
       li {
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 10px;
 
         &:last-child {
           margin-right: 0;

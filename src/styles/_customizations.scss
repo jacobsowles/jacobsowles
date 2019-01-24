@@ -2,6 +2,10 @@
 
 .content-card {
   box-shadow: $box-shadow;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .image-supported-text {

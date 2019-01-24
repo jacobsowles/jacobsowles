@@ -12,7 +12,7 @@ function Footer() {
         const { author } = data.site.siteMetadata;
 
         return (
-          <footer>
+          <footer className="footer">
             <div className="footer-column-wrapper">
               <div className="footer-column">
                 <Bio />

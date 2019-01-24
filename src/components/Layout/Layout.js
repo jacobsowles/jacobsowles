@@ -12,17 +12,17 @@ class Layout extends React.Component {
     return (
       <div className="layout">
         <section className="section section__header section__white">
-          <header className="section-content" role="banner">
+          <header className="section-wrapper" role="banner">
             <Header title={title} />
           </header>
         </section>
 
         <section className="section section__main section__light">
-          <main className="section-content">{children}</main>
+          <main className="section-wrapper">{children}</main>
         </section>
 
         <section className="section section__dark section__footer">
-          <div className="section-content">
+          <div className="section-wrapper">
             <Footer />
           </div>
         </section>

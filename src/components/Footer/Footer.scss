@@ -1,31 +1,19 @@
 @import '../../styles/variables';
 
-footer {
-  color: $text-light;
-  font-size: 0.9em;
-  font-weight: 300;
+.footer {
+  font-size: 0.8em;
 
-  a {
-    color: $text-white;
-    text-decoration: none;
-
-    &:focus {
-      text-decoration: none;
-    }
-
-    &:focus,
-    &:hover {
-      color: $text-white;
-    }
+  a,
+  p {
+    font-size: 1em;
+    font-weight: 300;
   }
 
   nav {
     ul {
       list-style-type: none;
-      margin: 0;
 
       a {
-        font-weight: 400;
         letter-spacing: 1px;
         text-transform: uppercase;
       }
@@ -33,16 +21,12 @@ footer {
       li:last-child p {
         margin-bottom: 0;
       }
-
-      p {
-        margin-top: 0;
-      }
     }
   }
 
   small {
     display: block;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
   }
 
@@ -51,7 +35,12 @@ footer {
     justify-content: space-between;
 
     .footer-column {
+      margin-right: 20px;
       max-width: 750px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -89,6 +78,10 @@ footer {
 
     .footer-column-wrapper {
       flex-wrap: wrap;
+
+      .footer-column {
+        margin-right: 0;
+      }
     }
   }
 }

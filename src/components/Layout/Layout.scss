@@ -33,7 +33,18 @@ body {
 
     &.section__dark {
       background: $brand-dark;
-      color: #ffffff;
+      color: $text-light;
+
+      a {
+        color: $text-white;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          color: $text-white;
+          text-decoration: underline;
+        }
+      }
     }
 
     &.section__footer {
@@ -61,14 +72,10 @@ body {
       background: #ffffff;
     }
 
-    .section-content {
+    .section-wrapper {
       margin: 0 auto;
       max-width: 1000px;
       padding: 0 20px;
-
-      .content-card:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 }
