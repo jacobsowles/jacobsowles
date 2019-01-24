@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ContentCard from '../components/ContentCard';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -9,10 +10,9 @@ class NotFoundPage extends React.PureComponent {
       <Layout location={this.props.location}>
         <SEO description="Page not found" title="404: Not Found" />
 
-        <div className="content-box">
-          <h1>Not found</h1>
+        <ContentCard title="Not found">
           <p>The page you requested has moved or doesn't exist.</p>
-        </div>
+        </ContentCard>
       </Layout>
     );
   }

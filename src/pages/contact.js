@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import ContentCard from '../components/ContentCard';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -27,9 +28,7 @@ class ContactPage extends React.PureComponent {
           title="Contact"
         />
 
-        <div className="content-box">
-          <h1>Get in touch</h1>
-
+        <ContentCard title="Get in touch">
           <p>
             The fastest way to get a hold of me is by{' '}
             <a href={`mailto:${social.email}`}>email</a>. Alternatively, feel
@@ -42,7 +41,7 @@ class ContactPage extends React.PureComponent {
             account, I rarely check it and wouldn't advise using that as a
             primary method of contact.
           </p>
-        </div>
+        </ContentCard>
       </Layout>
     );
   }

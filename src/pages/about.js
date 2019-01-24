@@ -1,6 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 
+import ContentCard from '../components/ContentCard';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import communityImage from '../../content/assets/community.png';
@@ -29,9 +30,7 @@ class AboutPage extends React.PureComponent {
           title="About"
         />
 
-        <div className="content-box">
-          <h1>About me</h1>
-
+        <ContentCard title="About me">
           <p>
             I'm Jacob. The best way to learn about me is to{' '}
             <Link to="/contact/">get in touch</Link>. But here are some words
@@ -108,7 +107,7 @@ class AboutPage extends React.PureComponent {
               </p>
             </div>
           </div>
-        </div>
+        </ContentCard>
       </Layout>
     );
   }

@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import BlogPostSnippet from '../components/BlogPostSnippet';
+import BlogPostExcerpt from '../components/BlogPostExcerpt';
+import ContentCard from '../components/ContentCard';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { init } from '../utils/icons';
@@ -32,7 +33,9 @@ class BlogIndex extends React.PureComponent {
           const title = node.frontmatter.title || node.fields.slug;
 
           return (
-            <BlogPostSnippet key={node.fields.slug} node={node} title={title} />
+            <ContentCard key={node.fields.slug}>
+              <BlogPostExcerpt node={node} title={title} />
+            </ContentCard>
           );
         })}
       </Layout>

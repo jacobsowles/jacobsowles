@@ -1,6 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 
+import ContentCard from '../components/ContentCard';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import WordCloud from '../components/WordCloud';
@@ -27,9 +28,7 @@ class SkillsPage extends React.PureComponent {
           ]}
           title="Top Skills"
         />
-        <div className="content-box">
-          <h1>Top skills at a glance</h1>
-
+        <ContentCard title="Top skills at a glance">
           <p>
             I make it a priority to constantly grow and diversify my skillset,
             so the best way to learn specifics is to{' '}
@@ -58,7 +57,7 @@ class SkillsPage extends React.PureComponent {
           </p>
 
           <WordCloud />
-        </div>
+        </ContentCard>
       </Layout>
     );
   }
