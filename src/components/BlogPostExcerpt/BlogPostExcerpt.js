@@ -12,11 +12,11 @@ const BlogPostExcerpt = ({ node, title }) => {
         style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}
       >
         <div style={{ flex: '1' }}>
-          <h3>
+          <h1>
             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
               {title}
             </Link>
-          </h3>
+          </h1>
 
           <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
 

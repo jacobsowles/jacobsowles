@@ -17,11 +17,17 @@
     max-width: 100%;
   }
 
-  small.date {
-    font-style: normal;
-    margin-top: 20px;
-    opacity: 0.8;
-    text-align: left;
+  small {
+    display: block;
+    font-style: italic;
+    text-align: center;
+
+    &.date {
+      font-style: normal;
+      margin-top: 20px;
+      opacity: 0.8;
+      text-align: left;
+    }
   }
 
   .post-navigation-links {
