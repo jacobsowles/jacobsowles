@@ -5,7 +5,7 @@
 
   p {
     display: block;
-    margin-top: 0;
+    margin: 0;
   }
 
   .bio-info-list {
@@ -73,7 +73,8 @@
     .list-wrapper {
       display: flex;
       justify-content: center;
-      padding-top: 20px;
+      margin-top: 0;
+      padding: 20px 0 0 0;
       width: 100%;
     }
   }
@@ -81,14 +82,12 @@
 
 @media only screen and (max-width: 444px) {
   .bio {
+    margin-bottom: 0;
+
     .bio-info-list {
-      margin-bottom: 20px;
-      margin-right: 0;
+      margin-right: 20px;
 
       li {
-        display: inline-block;
-        margin-right: 10px;
-
         &:last-child {
           margin-right: 0;
         }
@@ -97,6 +96,22 @@
           width: initial;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 378px) {
+  .bio {
+    .bio-info-list {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .bio {
+    .bio-info-list {
+      margin-right: 10px;
     }
   }
 }
