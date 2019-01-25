@@ -4,10 +4,13 @@
 .header {
   align-items: center;
   display: flex;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 
   h1 {
-    font-size: 0.9em;
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
     line-height: 1em;
     margin: 0 0 5px 0;
     text-transform: uppercase;
@@ -96,7 +99,7 @@
         &[aria-current='page'] {
           background: none;
           border-color: $brand-primary;
-          font-weight: bold;
+          font-weight: 700;
 
           &:focus,
           &:hover {
