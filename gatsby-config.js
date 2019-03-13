@@ -27,6 +27,23 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Noto Sans`,
+            subsets: [`latin`],
+            variants: [`300`, `400`],
+          },
+          {
+            family: `Roboto Slab`,
+            subsets: [`latin`],
+            variants: [`300`, `400`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,

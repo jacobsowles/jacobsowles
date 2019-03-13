@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import BlogPost from '../components/BlogPost';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -15,9 +14,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
 
-        <article>
-          <BlogPost next={next} post={post} previous={previous} />
-        </article>
+        <article />
       </Layout>
     );
   }
