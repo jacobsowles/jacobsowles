@@ -34,8 +34,8 @@ function Bio() {
                 <li>
                   <BioInfoItem
                     icon={['fas', 'users']}
-                    text="Vespa Group"
-                    url="https://vespa-group.com"
+                    text="Zapier"
+                    url="https://zapier.com"
                   />
                 </li>
                 <li>
