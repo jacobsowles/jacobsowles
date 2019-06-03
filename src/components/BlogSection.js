@@ -68,6 +68,8 @@ const BlogSection = ({ latestPost, nextPosts, ...rest }) => (
 
 const BlogPost = styled.article`
   background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
   display: flex;
   margin-bottom: 10px;
 
@@ -104,6 +106,8 @@ const Date = ({ children }) => (
 
 const FeaturedBlogPost = styled.article`
   background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
   display: inline-block;
   margin-right: 20px;
   width: 50%;
@@ -122,6 +126,8 @@ const FeaturedBlogPostText = styled.div`
 
 const Root = styled(Section)`
   background-color: #eeeeee;
+  border: 1px #dddddd;
+  border-style: solid none;
   padding: 40px;
 `;
 

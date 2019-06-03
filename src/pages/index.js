@@ -9,7 +9,6 @@ import ListItemWithIcon from '../components/ListItemWithIcon';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Text from '../components/Text';
-import fonts from '../styles/fonts';
 import { init } from '../utils/icons';
 
 init();
@@ -43,51 +42,35 @@ class HomePage extends React.PureComponent {
 
             <MenuLink to={'/'}>Home</MenuLink>
             <MenuLink to={'/blog/'}>Blog</MenuLink>
-            <MenuLink to={'/projects/'}>Projects</MenuLink>
           </Header>
         </Section>
 
         <BioSection>
-          <Image
-            fluid={data.profilePhoto.childImageSharp.fluid}
-            alt="Jacob Sowles"
-            style={{
-              display: 'inline-block',
-              marginRight: '40px',
-              height: '200px',
-              width: '200px',
-            }}
-          />
-
           <div style={{ display: 'inline-block', flex: '1' }}>
-            <h2
-              style={{
-                fontFamily: fonts.serif,
-                fontSize: '2.2em',
-                fontWeight: '300',
-                marginTop: '0',
-              }}
+            <Text
+              as="h2"
+              center
+              lightWeight
+              lineHeight="135%"
+              margin="0 0 40px 0"
+              serif
+              size="2.2em"
             >
               Full-stack software developer.
               <br />
               Aspiring everything-elser.
-            </h2>
+            </Text>
 
-            <p
-              style={{
-                fontFamily: fonts.sansSerif,
-                fontSize: '1.0em',
-                fontWeight: '300',
-                lineHeight: '150%',
-                margin: '0',
-              }}
-            >
-              I believe that being a great teammate is just as important as
-              writing great code. I value simplicity and maintainability over
-              cleverness, and I know that good code that ships is better than
-              perfect code that doesn’t. React and Node are my jam, but I'll use
-              whatever tools best get the job done.
-            </p>
+            <Text center light lightWeight>
+              React and Node are my jam, but I'll use whatever tools best get
+              the job done.
+              <br />
+              Being a great teammate is just as important as writing great code.
+              <br />
+              Good code that ships is better than perfect code that doesn’t.
+              <br />
+              Prefer simplicity and maintainability over cleverness.
+            </Text>
           </div>
         </BioSection>
 
@@ -172,6 +155,19 @@ class HomePage extends React.PureComponent {
                   </Text>
                 </ListItemWithIcon>
               </ListItems>
+
+              <Text as="small" right size="0.8em">
+                <a
+                  href="https://github.com/jacobsowles"
+                  style={{
+                    padding: '8px 16px',
+                    border: '2px solid #cccccc',
+                    textDecoration: 'none',
+                  }}
+                >
+                  ...and more
+                </a>
+              </Text>
             </Card>
 
             <Card>
@@ -185,7 +181,7 @@ class HomePage extends React.PureComponent {
                   imageAlt="mail icon"
                 >
                   <Text>
-                    <a href="mailto:jacob@jacobsowles.com">Email</a>
+                    <a href="mailto:jacob@jacobsowles.com">email</a>
                   </Text>
                 </ListItemWithIcon>
 
@@ -222,7 +218,7 @@ const BioSection = styled(Section)`
     align-items: center;
     display: flex;
     margin-top: ${headerHeight};
-    padding: 40px;
+    padding: 40px 40px 60px 40px;
   }
 `;
 
