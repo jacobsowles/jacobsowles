@@ -1,5 +1,6 @@
 ---
 title: How to Deploy a Google Domains Site to Netlify
+subtitle: It's only scary the first time. Let's do it.
 date: '2019-01-13'
 featuredImage: './banner.png'
 ---

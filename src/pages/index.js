@@ -1,49 +1,89 @@
-import { graphql } from 'gatsby';
-import React from 'react';
+import { graphql } from "gatsby";
+import Image from "gatsby-image";
+import React from "react";
+import styled from "styled-components";
 
-import BlogPostExcerpt from '../components/BlogPostExcerpt';
-import ContentCard from '../components/ContentCard';
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import { init } from '../utils/icons';
+import Layout from "../components/Layout";
+import Section from "../components/Section";
+import SEO from "../components/SEO";
+import Text from "../components/Text";
+import { init } from "../utils/icons";
 
 init();
 
-class BlogIndex extends React.PureComponent {
+class HomePage extends React.PureComponent {
   render() {
     const { data } = this.props;
-    const { description, title } = data.site.siteMetadata;
-    const posts = data.allMarkdownRemark.edges;
+    const { description } = data.site.siteMetadata;
 
     return (
-      <Layout location={this.props.location} title={title}>
+      <Layout>
         <SEO
-          description="A blog about software, productivity, and more"
+          description="Full-stack software developer. Aspiring everything-elser."
           keywords={[
             `blog`,
             `gatsby`,
             `Jacob Sowles`,
             `javascript`,
             `react`,
-            `software development`,
+            `software development`
           ]}
           title={`${description}`}
         />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
 
-          return (
-            <ContentCard key={node.fields.slug}>
-              <BlogPostExcerpt node={node} title={title} />
-            </ContentCard>
-          );
-        })}
+        <Image
+          fluid={data.profilePhoto.childImageSharp.fluid}
+          alt={"Photo of Jacob Sowles"}
+          style={{
+            borderRadius: "50%",
+            height: "300px",
+            margin: "20px auto 0 auto",
+            width: "300px"
+          }}
+        />
+
+        <BioSection>
+          <div style={{ display: "inline-block", flex: "1" }}>
+            <Text
+              as="h2"
+              center
+              lightWeight
+              lineHeight="135%"
+              margin="0 0 40px 0"
+              serif
+              size="2.0em"
+            >
+              Full-stack software developer.
+              <br />
+              Aspiring everything-elser.
+            </Text>
+
+            <Text center light lightWeight>
+              React and Node are my jam, but I'll use whatever tools best get
+              the job done. Being a great teammate is just as important as
+              writing great code. Good code that ships is better than perfect
+              code that doesn’t. Prefer simplicity and maintainability over
+              cleverness.
+            </Text>
+          </div>
+        </BioSection>
       </Layout>
     );
   }
 }
 
-export default BlogIndex;
+const headerHeight = "50px";
+
+const BioSection = styled(Section)`
+  & > div {
+    align-items: center;
+    display: flex;
+    margin-top: ${headerHeight};
+    padding: 0 40px 60px 40px;
+  }
+`;
+
+export default HomePage;
 
 export const pageQuery = graphql`
   query {
@@ -53,24 +93,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt(pruneLength: 300)
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM D, YYYY")
-            title
-            featuredImage {
-              childImageSharp {
-                sizes(maxWidth: 400) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-          }
+    profilePhoto: file(relativePath: { regex: "/profile-photo.jpg/" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
