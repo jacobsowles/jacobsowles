@@ -1,5 +1,5 @@
 import express from "express";
-import functions from "firebase-functions";
+import * as functions from "firebase-functions";
 
 import { addTimeRecord, getAllTimeRecords } from "./controllers";
 

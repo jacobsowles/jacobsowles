@@ -40,6 +40,8 @@ const addTimeRecord = async (req: Request, res: Response) => {
 };
 
 const getAllTimeRecords = async (req: Request, res: Response) => {
+    res.set("Access-Control-Allow-Origin", "*");
+
     try {
         const allTimeRecords: TimeRecord[] = [];
         const querySnapshot = await db.collection("timeRecords").get();

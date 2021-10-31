@@ -2,8 +2,8 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { App } from './components/App';
 import { Auth0ProviderWithHistory } from './auth';
+import { App } from './components/App';
 
 ReactDOM.render(
   <StrictMode>
