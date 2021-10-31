@@ -1,0 +1,64 @@
+{
+  "npmScope": "jacobsowles",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "Mjg3ZWYzOGEtYTUyZC00Y2U5LWFhOGQtYjgyNDdiYjJiNTRmfHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "jacobsowles": {
+      "tags": []
+    },
+    "jacobsowles-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "jacobsowles"
+      ]
+    },
+    "seat-time": {
+      "tags": []
+    },
+    "seat-time-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "seat-time"
+      ]
+    },
+    "ui": {
+      "tags": []
+    },
+    "ui-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "ui"
+      ]
+    }
+  }
+}
